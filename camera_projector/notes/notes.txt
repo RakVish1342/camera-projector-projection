@@ -1,0 +1,13 @@
+Installation Link: https://github.com/IntelRealSense/realsense-ros#installation-instructions
+Installation Link: https://github.com/IntelRealSense/realsense-ros#installation-instructions
+Installation Link: https://github.com/IntelRealSense/realsense-ros#installation-instructions
+* Follow installation via apt install (all dependencies taken care of)
+* (NOT catkin install through git clone, since that requires manual install of many packages)
+
+udev rules may or may not get set. If not set, follow: 
+https://github.com/IntelRealSense/realsense-ros/issues/1408
+https://github.com/IntelRealSense/realsense-ros/issues/1408
+https://github.com/IntelRealSense/realsense-ros/issues/1408
+https://github.com/IntelRealSense/realsense-ros/issues/1408#issuecomment-698128999
+https://github.com/IntelRealSense/realsense-ros/issues/1408#issuecomment-698128999
+https://github.com/IntelRealSense/realsense-ros/issues/1408#issuecomment-698128999
