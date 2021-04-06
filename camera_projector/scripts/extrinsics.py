@@ -31,38 +31,34 @@ plt.imshow("img", img_gray_histEq)
 plt.show()
 '''
 
-nrow = 7
-ncol = 9
-pattern_dims = (nrow-1, ncol-1)
+nrows = 7
+ncols = 9
+pattern_dims = (nrows-1, ncols-1)
 ret, corners = cv2.findChessboardCorners(img_gray, pattern_dims, None)
 img_corners = copy.deepcopy(img)
 if(ret):
     print(corners)
+    # Optional refining of corners in 10x10 pixel vicinity
+    # criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
+    # corners = cv2.cornerSubPix(img_corners, corners, (10, 10), (-1,-1), criteria)
     cv2.drawChessboardCorners(img_corners, pattern_dims, corners, ret)
 else:
     print("No corners found.")
 plt.imshow(img_corners)
 plt.show()
 
-
+# From ROS topic and physical sheet
 sq_len = 0.0185 # 18.5mm
+D = np.zeros((4,1)) # No lens distortion as per ros topic
 K = np.array( [[385.2106018066406, 0.0, 318.61053466796875], [0.0, 385.2106018066406, 242.80691528320312], [0.0, 0.0, 1.0]] )
 R = [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
 P = [[385.2106018066406, 0.0, 318.61053466796875], [0.0, 0.0, 385.2106018066406], [242.80691528320312, 0.0, 0.0, 0.0, 1.0, 0.0]]
 
-q = corners[47][0]
-q = np.array(q)
-q = np.transpose(q)
-Q = [[0], [nrow*sq_len]]
-Q = np.array(Q)
-
-# q = s*M*[R|t]*Q
-# homog = np.linalg.inv(K)*q*np.linalg.inv(Q) # inverse of a vector Q can't be taken/has no meaning. Need to solve as a system of linear eqns instead!!
 
 print("===")
 obj_pts = []
-for i in range(ncol-1-1, 0-1, -1): # rows
-    for j in range(0, nrow-1, +1): # cols
+for i in range(ncols-1-1, 0-1, -1): # rows
+    for j in range(0, nrows-1, +1): # cols
         # print([i, j, 0])
         obj_pts.append([i*sq_len, j*sq_len, 0])
 obj_pts = np.array(obj_pts)        
@@ -76,22 +72,30 @@ print(obj_pts)
 # ret,rvecs, tvecs = cv.solvePnP(objp, corners2, mtx, dist)
 # ret,rvecs, tvecs = cv2.solvePnP(obj_pts, corners, K, [0,0,0,0,0])
 # ret,rvecs, tvecs = cv2.solvePnP(obj_pts, corners, K)
-# cv2.solvePnP(model_points, image_points, camera_matrix, dist_coeffs, flags=cv2.CV_ITERATIVE)
+# cv2.solvePnP(model_points, image_points, camera_matrix, D, flags=cv2.CV_ITERATIVE)
 corners = np.array(corners)
-dist_coeffs = np.zeros((4,1)) # Assuming no lens distortion
-# ret,rvecs, tvecs = cv2.solvePnP(obj_pts, corners, K, dist_coeffs, flags=cv2.CV_ITERATIVE)
-pdb.set_trace()
-ret,rvecs, tvecs = cv2.solvePnP(obj_pts, corners, K, dist_coeffs, flags=cv2.cv2.SOLVEPNP_ITERATIVE)
+# ret,rvecs, tvecs = cv2.solvePnP(obj_pts, corners, K, D, flags=cv2.CV_ITERATIVE)
+ret,rvecs, tvecs = cv2.solvePnP(obj_pts, corners, K, D, flags=cv2.cv2.SOLVEPNP_ITERATIVE)
 
 print("===")
 print(rvecs)
+print("---")
+rvecs_mat = cv2.Rodrigues(rvecs)
+print(rvecs_mat)
+print("---")
 print(tvecs)
 
 
-
-
-
-
+# obj_pts_axis = np.float32([[0.1,0,0], [0,0.1,0], [0,0,0.1]]).reshape(-1,3)
+obj_pts_axis = np.float32([[0,0,0], [0.0185,0.0185,0], [3*0.0185,3*0.0185,0], [(ncols-1)*0.0185,(nrows-1)*0.0185,0]]).reshape(-1,3)
+imgpts, jac = cv2.projectPoints(obj_pts_axis, rvecs, tvecs, K, D)
+print(imgpts)
+cv2.circle(img, tuple(imgpts[0].ravel()), 5, (255,0,0), 2)
+cv2.circle(img, tuple(imgpts[1].ravel()), 5, (0,255,0), 2)
+cv2.circle(img, tuple(imgpts[2].ravel()), 5, (0,0,255), 2)
+cv2.circle(img, tuple(imgpts[3].ravel()), 5, (255,0,255), 2)
+plt.imshow(img)
+plt.show()
 
 
 
@@ -114,6 +118,53 @@ print(tvecs)
 
 
 '''
+** NOTES:
+
+
 *check if saved witout bgr8 what happens
+
+
+* Directly taking inverse won't work as explained below
+* Solving for such a transformation/projection is via cv2.solvePnp...which finds DLT's linear eqns solution
+# q = corners[47][0]
+# q = np.array(q)
+# q = np.transpose(q)
+# Q = [[0], [nrows*sq_len]]
+# Q = np.array(Q)
+# q = s*M*[R|t]*Q
+# homog = np.linalg.inv(K)*q*np.linalg.inv(Q) # inverse of a vector Q can't be taken/has no meaning. Need to solve as a system of linear eqns instead!!
+
+
+* What is the meaining of this axis plot??
+* How does it even work? Does it even work??
+# def draw(img, corners, imgpts, idx):
+#     # corner = tuple(corners[0].ravel())
+#     # corner = tuple(corners[10].ravel())
+#     # corner = tuple(corners[42].ravel())
+#     corner = tuple(corners[idx].ravel())
+#     img = cv2.line(img, corner, tuple(imgpts[0].ravel()), (255,0,0), 5)
+#     img = cv2.line(img, corner, tuple(imgpts[1].ravel()), (0,255,0), 5)
+#     img = cv2.line(img, corner, tuple(imgpts[2].ravel()), (0,0,255), 5)
+#     return img
+
+# # Plot axes
+# # obj_pts_axis = np.float32([[3,0,0], [0,3,0], [0,0,-3]]).reshape(-1,3)
+# obj_pts_axis = np.float32([[0.1,0,0], [0,0.1,0], [0,0,0.1]]).reshape(-1,3)
+# imgpts, jac = cv2.projectPoints(obj_pts_axis, rvecs, tvecs, K, D)
+# print(img.shape)
+# print(imgpts)
+# img = draw(img, corners, imgpts, 0)
+# # img = draw(img, corners, imgpts, 6)
+# # img = draw(img, corners, imgpts, 12)
+# # img = draw(img, corners, imgpts, 18)
+# # img = draw(img, corners, imgpts, 24)
+# img = draw(img, corners, imgpts, 27)
+# # img = draw(img, corners, imgpts, 30)
+# # img = draw(img, corners, imgpts, 36)
+# img = draw(img, corners, imgpts, 42)
+# plt.imshow(img)
+# plt.show()
+
+
 
 '''
