@@ -42,7 +42,7 @@ if(ret):
 else:
     print("No corners found.")
 plt.imshow(img_corners)
-# plt.show()
+plt.show()
 
 
 sq_len = 0.0185 # 18.5mm
@@ -61,8 +61,9 @@ Q = np.array(Q)
 
 print("===")
 obj_pts = []
-for i in range(nrow-1, 0-1, -1): # rows
-    for j in range(0, ncol, +1): # cols
+for i in range(ncol-1-1, 0-1, -1): # rows
+    for j in range(0, nrow-1, +1): # cols
+        # print([i, j, 0])
         obj_pts.append([i*sq_len, j*sq_len, 0])
 obj_pts = np.array(obj_pts)        
 print(obj_pts)
@@ -79,6 +80,7 @@ print(obj_pts)
 corners = np.array(corners)
 dist_coeffs = np.zeros((4,1)) # Assuming no lens distortion
 # ret,rvecs, tvecs = cv2.solvePnP(obj_pts, corners, K, dist_coeffs, flags=cv2.CV_ITERATIVE)
+pdb.set_trace()
 ret,rvecs, tvecs = cv2.solvePnP(obj_pts, corners, K, dist_coeffs, flags=cv2.cv2.SOLVEPNP_ITERATIVE)
 
 print("===")
