@@ -5,6 +5,7 @@ import copy
 import numpy as np
 from matplotlib import pyplot as plt
 
+
 path = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images/"
 filename = "img_from_topic.png"
 
@@ -85,7 +86,6 @@ print("---")
 print("TVECS")
 print(tvecs)
 
-
 # obj_pts_axis = np.float32([[0.1,0,0], [0,0.1,0], [0,0,0.1]]).reshape(-1,3)
 obj_pts_axis = np.float32([[0,0,0], [0.0185,0.0185,0], [3*0.0185,3*0.0185,0], [(ncols-1)*0.0185,(nrows-1)*0.0185,0]]).reshape(-1,3)
 imgpts, jac = cv2.projectPoints(obj_pts_axis, rvecs, tvecs, K, D)
@@ -100,14 +100,70 @@ plt.imshow(img)
 plt.show()
 
 
+print("========================")
+print("PROJECTOR CALIBRATION")
+img = plt.imread(path+"squares_scrnshot_1920x1080.png", "bgr8")
+img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR) # Convert from four channel BGR-alpha img to three channel BGR img
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+# plt.imshow(img_gray, cmap="gray")
+# plt.show()
 
+nrows = 7
+ncols = 9
+pattern_dims = (nrows-1, ncols-1)
+ret, corners = cv2.findChessboardCorners(img_gray, pattern_dims, None)
+img_corners = copy.deepcopy(img)
+if(ret):
+    print(corners)
+    # Optional refining of corners in 10x10 pixel vicinity
+    # criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
+    # corners = cv2.cornerSubPix(img_corners, corners, (10, 10), (-1,-1), criteria)
+    cv2.drawChessboardCorners(img_corners, pattern_dims, corners, ret)
+else:
+    print("No corners found.")
+plt.imshow(img_corners)
+plt.show()
 
+# Corner points are detected in the opposite order in the screenshot, 
+# so will label object points in a different order
+print("===")
+print("OBJ PTS")
+obj_pts = []
+for i in range(0, ncols-1, +1): # rows
+    for j in range(nrows-1-1, 0-1, -1): # cols
+        # print([i, j, 0])
+        obj_pts.append([i*sq_len, j*sq_len, 0])
+obj_pts = np.array(obj_pts)
+# print(obj_pts)
+objpoints = np.array([obj_pts], dtype="float32")
+imgpoints = np.array([corners], dtype="float32")
+ret, K_pr, D_pr, rvecs_pr, tvecs_pr = cv2.calibrateCamera(objpoints, imgpoints, img_gray.shape[::-1], None, None)
+rvecs_pr = rvecs_pr[0]
+tvecs_pr = tvecs_pr[0]
 
+print("===")
+print("D_pr")
+print(D_pr)
+print("K_pr")
+print(K_pr)
+print("R and P __pr")
+print( cv2.Rodrigues(np.array(rvecs_))[0] )
+print(tvecs_)
 
+# If intrinsics already known, can obtain extrinsincs using this:
+# ret,rvecs_pr, tvecs_pr = cv2.solvePnP(obj_pts, corners, K_pr, D_pr, flags=cv2.cv2.SOLVEPNP_ITERATIVE)
 
+imgpts, jac = cv2.projectPoints(obj_pts_axis, rvecs_pr, tvecs_pr, K_pr, D_pr)
 
-
-
+print("===")
+print("IMG PTS")
+print(imgpts)
+cv2.circle(img, tuple(imgpts[0].ravel()), 15, (255,0,0), 5)
+cv2.circle(img, tuple(imgpts[1].ravel()), 15, (0,255,0), 5)
+cv2.circle(img, tuple(imgpts[2].ravel()), 15, (0,0,255), 5)
+cv2.circle(img, tuple(imgpts[3].ravel()), 15, (255,0,255), 5)
+plt.imshow(img)
+plt.show()
 
 
 
