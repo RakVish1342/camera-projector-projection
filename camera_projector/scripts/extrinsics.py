@@ -9,6 +9,8 @@ from matplotlib import pyplot as plt
 path = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images/"
 filename = "img_from_topic.png"
 
+bRodriguesFirstComp = True
+
 img = plt.imread(path+filename, "bgr8") # If format to read it in is not mentioned, then pixels are in 0-1 range.
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 # plt.imshow(img_gray, cmap="gray")
@@ -74,12 +76,12 @@ print(tvecs_)
 
 corners = np.array(corners)
 ret,rvecs, tvecs = cv2.solvePnP(obj_pts, corners, K, D, flags=cv2.cv2.SOLVEPNP_ITERATIVE)
+rvecs_mat = cv2.Rodrigues(rvecs)
 
 print("===")
 print("RVECS")
 print(rvecs)
 print("---")
-rvecs_mat = cv2.Rodrigues(rvecs)
 print("RMAT")
 print(rvecs_mat)
 print("---")
@@ -139,6 +141,7 @@ objpoints = np.array([obj_pts], dtype="float32")
 imgpoints = np.array([corners], dtype="float32")
 ret, K_pr, D_pr, rvecs_pr, tvecs_pr = cv2.calibrateCamera(objpoints, imgpoints, img_gray.shape[::-1], None, None)
 rvecs_pr = rvecs_pr[0]
+rvecs_mat_pr = cv2.Rodrigues(rvecs_pr)
 tvecs_pr = tvecs_pr[0]
 
 print("===")
@@ -147,7 +150,7 @@ print(D_pr)
 print("K_pr")
 print(K_pr)
 print("R and P __pr")
-print( cv2.Rodrigues(np.array(rvecs_))[0] )
+print( rvecs_mat_pr )
 print(tvecs_)
 
 # If intrinsics already known, can obtain extrinsincs using this:
@@ -166,6 +169,35 @@ plt.imshow(img)
 plt.show()
 
 
+
+
+print("================================================")
+print("TRANSFORMATION BETWEEN PROJECTOR AND CAMERA")
+if(bRodriguesFirstComp):
+    rvecs_mat = rvecs_mat[0]
+    rvecs_mat_pr = rvecs_mat_pr[0]
+
+homo_o_p = np.zeros((4, 4))
+homo_o_p[0:3, 0:3] = rvecs_mat_pr
+homo_o_p[0:3, 3] = tvecs_pr.reshape(3) # https://stackoverflow.com/questions/17869840/numpy-vector-n-1-dimension-n-dimension-conversion
+homo_o_p[3][3] = 1
+
+homo_o_c = np.zeros((4,4))
+homo_o_c[0:3, 0:3] = rvecs_mat
+homo_o_c[0:3, 3] = tvecs.reshape(3)
+homo_o_c[3][3] = 1
+
+tmp_trans = homo_o_c[0:3, 3]
+tmp_rot = homo_o_c[0:3, 0:3]
+tmp_rot_inv = np.linalg.inv(tmp_rot)
+homo_c_o = np.zeros((4,4))
+homo_c_o[0:3, 0:3] = tmp_rot_inv
+homo_o_c[0:3, 3] = -tmp_rot_inv.dot(tmp_trans) # tmp_rot_inv * tmp_trans
+
+homo_c_p = homo_o_p * homo_c_o
+
+print("Camera in Projector's Frame: H_c_p")
+print(homo_c_p)
 
 '''
 ** NOTES:
