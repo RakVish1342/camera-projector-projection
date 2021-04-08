@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/aruco_deteciton.dir/src/aruco_detection.cpp.o  -o devel/lib/camera_projector/aruco_deteciton 

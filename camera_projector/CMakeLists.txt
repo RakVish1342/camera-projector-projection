@@ -10,12 +10,11 @@ project(camera_projector)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
-  std_msgs
+  std_msgs sensor_msgs cv_bridge geometry_msgs
 )
 
-## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
-
+find_package(OpenCV REQUIRED)
+#find_package(Eigen REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -204,3 +203,7 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+add_executable(aruco_detection src/aruco_detection.cpp)
+add_executable(aruco_corner_write src/aruco_corner_write)
+target_link_libraries(aruco_detection   ${catkin_LIBRARIES} ${OpenCV_LIBS})
+target_link_libraries(aruco_corner_write   ${catkin_LIBRARIES} ${OpenCV_LIBS})

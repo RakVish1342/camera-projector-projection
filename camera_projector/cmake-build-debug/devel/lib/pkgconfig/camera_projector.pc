@@ -1,0 +1,8 @@
+prefix=/home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector/cmake-build-debug/devel
+
+Name: camera_projector
+Description: Description of camera_projector
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

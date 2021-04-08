@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: camera_projector
+Description: Description of camera_projector
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
