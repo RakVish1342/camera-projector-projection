@@ -84,7 +84,7 @@ int main(int argc, char** argv){
         cv::waitKey(3);
 
         //get pose of markers
-        cv::Mat camera_matrix(3,3, CV_8UC1), distortion_coeffs(1, 5, CV_8UC1);
+        cv::Mat camera_matrix(3,3, CV_32F), distortion_coeffs(1, 5, CV_32F);
         camera_matrix.at<float_t>(0,0) = 614.623;
         camera_matrix.at<float_t >(0,1) = 0;
         camera_matrix.at<float_t >(0,2) = 327.88;
@@ -96,7 +96,7 @@ int main(int argc, char** argv){
         camera_matrix.at<float_t >(2,0) = 0;
         camera_matrix.at<float_t >(2,1) = 0;
         camera_matrix.at<float_t >(2,2) = 1;
-        std::cout<<"Camera Matrix: "<<camera_matrix<<std::endl;
+        //std::cout<<"Camera Matrix: "<<camera_matrix<<std::endl;
 
         distortion_coeffs.at<float_t > (0,0) = 0;
         distortion_coeffs.at<float_t > (0,1) = 0;
@@ -120,14 +120,19 @@ int main(int argc, char** argv){
 
 
             cv::Mat rotation_matrix;
-            std::cout<<rvecs[0]<<std::endl;
+            
+            //std::cout<<rvecs[0]<<std::endl;
             cv::Rodrigues(rvecs[0], rotation_matrix);
+            std::cout<<"Type: "<<rotation_matrix.type()<<std::endl; 
+            std::cout<<rotation_matrix<<std::endl; 
+
             Eigen::Matrix3d eigen_rotation_matrix;
             for(int i =0; i< 3; i++){
                 for(int j=0; j<3; j++)
-                    eigen_rotation_matrix(i,j) = rotation_matrix.at<float_t > (i,j);
+                    eigen_rotation_matrix(i,j) = rotation_matrix.at<double_t> (i,j);
             }
             Eigen::Quaterniond eigen_quaternion(eigen_rotation_matrix);
+            eigen_quaternion.normalize(); 
             camera_aruco_pose.pose.orientation.x = eigen_quaternion.x();
             camera_aruco_pose.pose.orientation.y = eigen_quaternion.y();
             camera_aruco_pose.pose.orientation.z = eigen_quaternion.z();
