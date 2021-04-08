@@ -5,7 +5,6 @@ import copy
 import numpy as np
 from matplotlib import pyplot as plt
 
-
 path = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images/"
 filename = "img_from_topic.png"
 

@@ -9,6 +9,7 @@
 #include <eigen3/Eigen/Dense>
 #include <eigen3/Eigen/Geometry>
 
+double marker_size = 0.07; 
 
 std::string image_topic_name = "/camera/color/image_raw";
 cv::Matx41d aa2quaternion(const cv::Vec3d& aa)
@@ -56,6 +57,14 @@ int main(int argc, char** argv){
     //ge    t ros image realsenses
     ros::Subscriber sub_image = nh.subscribe(image_topic_name, 1000, realsenseImageCallback);
     ros::Publisher pub_camera_aruco_pose = nh.advertise<geometry_msgs::PoseStamped>("/camera_aruco/pose", 100);
+    ros::Publisher pub_corner_tl = nh.advertise<geometry_msgs::PoseStamped>("/camera_aruco/corner_tl", 100);
+    ros::Publisher pub_corner_tr = nh.advertise<geometry_msgs::PoseStamped>("/camera_aruco/corner_tr", 100);
+    ros::Publisher pub_corner_br = nh.advertise<geometry_msgs::PoseStamped>("/camera_aruco/corner_br", 100);
+    ros::Publisher pub_corner_bl = nh.advertise<geometry_msgs::PoseStamped>("/camera_aruco/corner_bl", 100);
+    
+
+     
+
 
     ros::Rate rate(20);
 
@@ -107,7 +116,7 @@ int main(int argc, char** argv){
 
         std::vector<cv::Vec3d> rvecs, tvecs;
         //TODO: CHANGE THE SIZE OF THE MARKERS
-        cv::aruco::estimatePoseSingleMarkers(marker_corners, 0.1, camera_matrix, distortion_coeffs, rvecs, tvecs);
+        cv::aruco::estimatePoseSingleMarkers(marker_corners, marker_size, camera_matrix, distortion_coeffs, rvecs, tvecs);
         if(marker_corners.size() > 0){
             //cv::Matx41d quat_cv = aa2quaternion(rvecs[0]);
 
@@ -138,6 +147,63 @@ int main(int argc, char** argv){
             camera_aruco_pose.pose.orientation.z = eigen_quaternion.z();
             camera_aruco_pose.pose.orientation.w = eigen_quaternion.w();
             std::cout<<"ArUco Camera pose: "<<camera_aruco_pose<<std::endl;
+
+            geometry_msgs::PoseStamped corner_tl_pose, corner_tr_pose, corner_br_pose, corner_bl_pose; 
+            //Eigen::Matrix4d cHtl, cHtr, cHbr, cHbl; 
+            Eigen::Matrix4d cHa; 
+            cHa << eigen_rotation_matrix(0,0), eigen_rotation_matrix(0,1), eigen_rotation_matrix(0,2), tvecs[0].val[0],
+                      eigen_rotation_matrix(1,0),eigen_rotation_matrix(1,1),eigen_rotation_matrix(1,2), tvecs[0].val[1], 
+                      eigen_rotation_matrix(2,0),eigen_rotation_matrix(2,1),eigen_rotation_matrix(2,2), tvecs[0].val[2],
+                      0, 0, 0 ,1; 
+            
+            Eigen::Matrix4d aHtl, aHtr, aHbr, aHbl; 
+            aHtl << 1, 0, 0, -marker_size/2, 
+                    0, 1, 0, marker_size/2, 
+                    0, 0, 1, 0, 
+                    0, 0, 0, 1; 
+
+            aHtr << 1, 0, 0, marker_size/2, 
+                    0, 1, 0, marker_size/2, 
+                    0, 0, 1, 0, 
+                    0, 0, 0, 1; 
+
+            aHbr << 1, 0, 0, marker_size/2, 
+                    0, 1, 0, -marker_size/2, 
+                    0, 0, 1, 0, 
+                    0, 0, 0, 1; 
+
+            aHbl << 1, 0, 0, -marker_size/2, 
+                    0, 1, 0, -marker_size/2, 
+                    0, 0, 1, 0, 
+                    0, 0, 0, 1; 
+
+            Eigen::Matrix4d cHtl, cHtr, cHbr, cHbl; 
+            cHtl = cHa*aHtl;
+            cHtr = cHa*aHtr;
+            cHbr = cHa*aHbr; 
+            cHbl = cHa*aHbl;
+
+            corner_tl_pose.pose.position.x = cHtl(0,3);
+            corner_tl_pose.pose.position.y = cHtl(1,3);
+            corner_tl_pose.pose.position.z = cHtl(2,3);
+
+            corner_tr_pose.pose.position.x = cHtr(0,3);
+            corner_tr_pose.pose.position.y = cHtr(1,3);
+            corner_tr_pose.pose.position.z = cHtr(2,3);
+
+            corner_br_pose.pose.position.x = cHbr(0,3);
+            corner_br_pose.pose.position.y = cHbr(1,3);
+            corner_br_pose.pose.position.z = cHbr(2,3);
+
+            corner_bl_pose.pose.position.x = cHbl(0,3);
+            corner_bl_pose.pose.position.y = cHbl(1,3);
+            corner_bl_pose.pose.position.z = cHbl(2,3); 
+
+            pub_corner_tl.publish(corner_tl_pose);
+            pub_corner_tr.publish(corner_tr_pose);
+            pub_corner_br.publish(corner_br_pose);
+            pub_corner_bl.publish(corner_bl_pose); 
+
 
         }
 
