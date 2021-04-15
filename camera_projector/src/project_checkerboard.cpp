@@ -7,7 +7,7 @@
 #include "utils_projections.h"
 
 std::string image_path = "/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/data/images/checkerboard.png";
-std::string corner_file_name="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/data/images/homecorners1.txt";
+std::string corner_file_name="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/data/images/corners3.txt";
 int main(){
     //load the checkerboard image
     cv::Mat checkerboard_img = cv::imread(image_path);
@@ -24,12 +24,12 @@ int main(){
     std::cout<<"bg size: "<<background_white_img.rows<<" "<<background_white_img.cols<<"\n";
     //cv::cvtColor(background_white_img, main_img, CV_BGR2GRAY);
 
-    //add the checkerboard to the white image
+    //add the   checkerboard to the white image
     addImages(background_white_img, checkerboard_img);
 
     //detect corners
     cv::Mat corners;
-    if(cv::findChessboardCorners(background_white_img, cv::Size(7, 9), corners ))
+    if(cv::findChessboardCorners(background_white_img, cv::Size(8, 6), corners ))
         std::cout<<"corners_written"<<std::endl;
 
     //send the corners to a file

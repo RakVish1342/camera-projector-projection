@@ -11,7 +11,7 @@ void writeCorners2File(cv::Mat corners, std::string corner_file_name){
     std::cout<<"writing corner to file";
     std::cout<<corners<<std::endl;
     for(int i =0; i< corners.rows; i++){
-        fout<<corners.at<double_t>(i, 0)<<","<<corners.at<double_t>(i, 1)<<"\n";
+        fout<<corners.at<float_t>(i, 0)<<","<<corners.at<float_t>(i, 1)<<"\n";
     }
     fout.close();
 
