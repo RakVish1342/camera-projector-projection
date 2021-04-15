@@ -67,8 +67,8 @@ set(camera_projector_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(camera_projector_SOURCE_PREFIX /home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector)
-  set(camera_projector_DEVEL_PREFIX /home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector/cmake-build-debug/devel)
+  set(camera_projector_SOURCE_PREFIX /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector)
+  set(camera_projector_DEVEL_PREFIX /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel)
   set(camera_projector_INSTALL_PREFIX "")
   set(camera_projector_PREFIX ${camera_projector_DEVEL_PREFIX})
 else()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /usr/local/lib;/home/alg/underwater_ws/devel/lib;/home/alg/terrain_following_ws/devel/lib;/home/alg/freeflyer_build/native/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /usr/local/lib;/home/alg/projection_mapping/projection_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

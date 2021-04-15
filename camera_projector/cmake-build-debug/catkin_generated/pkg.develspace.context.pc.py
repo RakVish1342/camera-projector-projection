@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "camera_projector"
-PROJECT_SPACE_DIR = "/home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector/cmake-build-debug/devel"
+PROJECT_SPACE_DIR = "/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel"
 PROJECT_VERSION = "0.0.0"

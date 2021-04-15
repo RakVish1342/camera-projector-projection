@@ -204,6 +204,9 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 add_executable(aruco_detection src/aruco_detection.cpp)
-add_executable(aruco_corner_write src/aruco_corner_write)
+add_executable(aruco_corner_write src/aruco_corner_write )
+add_executable(project_checkerboard src/project_checkerboard.cpp src/utils_projections.h)
+
 target_link_libraries(aruco_detection   ${catkin_LIBRARIES} ${OpenCV_LIBS})
 target_link_libraries(aruco_corner_write   ${catkin_LIBRARIES} ${OpenCV_LIBS})
+target_link_libraries(project_checkerboard ${catkin_LIBRARIES} ${OpenCV_LIBS})

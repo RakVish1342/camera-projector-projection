@@ -1,30 +1,31 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_60990/fast && /usr/bin/make -f CMakeFiles/cmTC_60990.dir/build.make CMakeFiles/cmTC_60990.dir/build
-make[1]: Entering directory '/home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_60990.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_60990.dir/src.c.o   -c /home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_60990
-/home/alg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60990.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_60990.dir/src.c.o  -o cmTC_60990 
-CMakeFiles/cmTC_60990.dir/src.c.o: In function `main':
-src.c:(.text+0x3c): undefined reference to `pthread_create'
-src.c:(.text+0x48): undefined reference to `pthread_detach'
-src.c:(.text+0x59): undefined reference to `pthread_join'
-src.c:(.text+0x6d): undefined reference to `pthread_atfork'
+Run Build Command(s):/usr/bin/make cmTC_38206/fast && /usr/bin/make  -f CMakeFiles/cmTC_38206.dir/build.make CMakeFiles/cmTC_38206.dir/build
+make[1]: Entering directory '/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_38206.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_38206.dir/src.c.o -c /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_38206
+/snap/clion/149/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38206.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_38206.dir/src.c.o -o cmTC_38206 
+CMakeFiles/cmTC_38206.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_60990.dir/build.make:86: recipe for target 'cmTC_60990' failed
-make[1]: *** [cmTC_60990] Error 1
-make[1]: Leaving directory '/home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_60990/fast' failed
-make: *** [cmTC_60990/fast] Error 2
+CMakeFiles/cmTC_38206.dir/build.make:105: recipe for target 'cmTC_38206' failed
+make[1]: *** [cmTC_38206] Error 1
+make[1]: Leaving directory '/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_38206/fast' failed
+make: *** [cmTC_38206/fast] Error 2
 
 
 Source file was:
 #include <pthread.h>
 
-void* test_func(void* data)
+static void* test_func(void* data)
 {
   return data;
 }
@@ -34,6 +35,7 @@ int main(void)
   pthread_t thread;
   pthread_create(&thread, NULL, test_func, NULL);
   pthread_detach(thread);
+  pthread_cancel(thread);
   pthread_join(thread, NULL);
   pthread_atfork(NULL, NULL, NULL);
   pthread_exit(NULL);
@@ -42,22 +44,22 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_37a1c/fast && /usr/bin/make -f CMakeFiles/cmTC_37a1c.dir/build.make CMakeFiles/cmTC_37a1c.dir/build
-make[1]: Entering directory '/home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_37a1c.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_37a1c.dir/CheckFunctionExists.c.o   -c /home/alg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/CheckFunctionExists.c
-Linking C executable cmTC_37a1c
-/home/alg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37a1c.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_37a1c.dir/CheckFunctionExists.c.o  -o cmTC_37a1c -lpthreads 
+Run Build Command(s):/usr/bin/make cmTC_951c0/fast && /usr/bin/make  -f CMakeFiles/cmTC_951c0.dir/build.make CMakeFiles/cmTC_951c0.dir/build
+make[1]: Entering directory '/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_951c0.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_951c0.dir/CheckFunctionExists.c.o -c /snap/clion/149/bin/cmake/linux/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_951c0
+/snap/clion/149/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_951c0.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_951c0.dir/CheckFunctionExists.c.o -o cmTC_951c0  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_37a1c.dir/build.make:86: recipe for target 'cmTC_37a1c' failed
-make[1]: *** [cmTC_37a1c] Error 1
-make[1]: Leaving directory '/home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_37a1c/fast' failed
-make: *** [cmTC_37a1c/fast] Error 2
+CMakeFiles/cmTC_951c0.dir/build.make:105: recipe for target 'cmTC_951c0' failed
+make[1]: *** [cmTC_951c0] Error 1
+make[1]: Leaving directory '/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_951c0/fast' failed
+make: *** [cmTC_951c0/fast] Error 2
 
 
 

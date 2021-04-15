@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector/src/aruco_corner_write.cpp" "/home/alg/projection_ws/src/projection_packages/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/aruco_corner_write.dir/src/aruco_corner_write.cpp.o"
+  "/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/aruco_corner_write.cpp" "/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/aruco_corner_write.dir/src/aruco_corner_write.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,10 +17,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/opt/ros/kinetic/include"
-  "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev"
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
+  "/opt/ros/melodic/include"
+  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/usr/include/opencv"
   )
 
 # Targets to which this target links.
