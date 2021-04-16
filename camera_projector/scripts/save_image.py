@@ -16,8 +16,10 @@ class SaveImage:
 
     def __init__(self):
         self.path = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images/"
-        self.filename = "img_from_topic.png"
-        self.topic = "/camera/color/image_raw"
+        # self.filename = "img_from_topic.png"
+        self.filename = "tree_dpv_multi3.png"
+        # self.topic = "/camera/color/image_raw"
+        self.topic = "/camera/depth/image_rect_raw"
         # self.sub = rospy.Subscriber("/camera/color/image_raw", Image, self.getImage) # rospy has no way of doing spinOnce()
 
     def execute(self):
@@ -27,7 +29,9 @@ class SaveImage:
         msg = rospy.wait_for_message(self.topic, Image, timeout=None)
         print("Received message from topic.")
         
-        img = bridge.imgmsg_to_cv2(msg, "bgr8")
+        # img = bridge.imgmsg_to_cv2(msg, "bgr8")
+        # img = bridge.imgmsg_to_cv2(msg, "mono16")
+        img = bridge.imgmsg_to_cv2(msg)
         cv2.imwrite(self.path+self.filename, img)
         print("Done Saving. Exiting...")
 
