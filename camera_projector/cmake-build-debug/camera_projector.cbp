@@ -67,6 +67,122 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="tree_segmentation">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_segmentation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_segmentation"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tree_segmentation/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_segmentation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_segmentation/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tree_detection">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_detection" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_detection"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tree_detection/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_detection" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_detection/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="test">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
@@ -208,6 +324,64 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="color_thresholding">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/color_thresholding" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 color_thresholding"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="color_thresholding/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/color_thresholding" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 color_thresholding/fast"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -551,6 +725,64 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="tree_animation">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_animation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_animation"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tree_animation/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_animation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_animation/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="sensor_msgs_generate_messages_eus">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
@@ -784,8 +1016,20 @@
 		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/aruco_detection.cpp">
 			<Option target="aruco_detection"/>
 		</Unit>
+		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/color_thresholding.cpp">
+			<Option target="color_thresholding"/>
+		</Unit>
 		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/project_checkerboard.cpp">
 			<Option target="project_checkerboard"/>
+		</Unit>
+		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/tree_animation.cpp">
+			<Option target="tree_animation"/>
+		</Unit>
+		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/tree_detection.cpp">
+			<Option target="tree_detection"/>
+		</Unit>
+		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/tree_segmentation.cpp">
+			<Option target="tree_segmentation"/>
 		</Unit>
 		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/utils_projections.h">
 			<Option target="project_checkerboard"/>

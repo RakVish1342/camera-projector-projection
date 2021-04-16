@@ -22,6 +22,11 @@ void makeImgWhite(cv::Mat& img){
         for(int j= 0; j< img.cols; j++)
             img.at<uchar>(i,j) = 255;
 }
+void makeImgBlack(cv::Mat& img){
+    for(int i =0; i< img.rows; i++)
+        for(int j= 0; j< img.cols; j++)
+            img.at<uchar>(i,j) = 0;
+}
 
 void addImages(cv::Mat& bg, cv::Mat img){
     for(int i =0; i< img.rows; i++){

@@ -72,9 +72,13 @@ CMAKE_BINARY_DIR = /home/alg/projection_mapping/projection_ws/src/camera-project
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/tree_segmentation.dir/all
+all: CMakeFiles/tree_detection.dir/all
 all: CMakeFiles/aruco_detection.dir/all
 all: CMakeFiles/project_checkerboard.dir/all
+all: CMakeFiles/color_thresholding.dir/all
 all: CMakeFiles/aruco_corner_write.dir/all
+all: CMakeFiles/tree_animation.dir/all
 all: gtest/all
 
 .PHONY : all
@@ -85,10 +89,13 @@ preinstall: gtest/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/tree_segmentation.dir/clean
+clean: CMakeFiles/tree_detection.dir/clean
 clean: CMakeFiles/aruco_detection.dir/clean
 clean: CMakeFiles/project_checkerboard.dir/clean
 clean: CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 clean: CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+clean: CMakeFiles/color_thresholding.dir/clean
 clean: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 clean: CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
 clean: CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
@@ -117,6 +124,7 @@ clean: CMakeFiles/std_msgs_generate_messages_py.dir/clean
 clean: CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 clean: CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 clean: CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+clean: CMakeFiles/tree_animation.dir/clean
 clean: CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
 clean: gtest/clean
 
@@ -180,6 +188,60 @@ gtest/googlemock/gtest/clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/c
 .PHONY : gtest/googlemock/gtest/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/tree_segmentation.dir
+
+# All Build rule for target.
+CMakeFiles/tree_segmentation.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=24,25 "Built target tree_segmentation"
+.PHONY : CMakeFiles/tree_segmentation.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tree_segmentation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tree_segmentation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/tree_segmentation.dir/rule
+
+# Convenience name for target.
+tree_segmentation: CMakeFiles/tree_segmentation.dir/rule
+
+.PHONY : tree_segmentation
+
+# clean rule for target.
+CMakeFiles/tree_segmentation.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/clean
+.PHONY : CMakeFiles/tree_segmentation.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tree_detection.dir
+
+# All Build rule for target.
+CMakeFiles/tree_detection.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target tree_detection"
+.PHONY : CMakeFiles/tree_detection.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tree_detection.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tree_detection.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/tree_detection.dir/rule
+
+# Convenience name for target.
+tree_detection: CMakeFiles/tree_detection.dir/rule
+
+.PHONY : tree_detection
+
+# clean rule for target.
+CMakeFiles/tree_detection.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/clean
+.PHONY : CMakeFiles/tree_detection.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/aruco_detection.dir
 
 # All Build rule for target.
@@ -213,7 +275,7 @@ CMakeFiles/aruco_detection.dir/clean:
 CMakeFiles/project_checkerboard.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_checkerboard.dir/build.make CMakeFiles/project_checkerboard.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_checkerboard.dir/build.make CMakeFiles/project_checkerboard.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target project_checkerboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=18,19 "Built target project_checkerboard"
 .PHONY : CMakeFiles/project_checkerboard.dir/all
 
 # Build rule for subdir invocation for target.
@@ -286,6 +348,33 @@ sensor_msgs_generate_messages_py: CMakeFiles/sensor_msgs_generate_messages_py.di
 CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/color_thresholding.dir
+
+# All Build rule for target.
+CMakeFiles/color_thresholding.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target color_thresholding"
+.PHONY : CMakeFiles/color_thresholding.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/color_thresholding.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/color_thresholding.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/color_thresholding.dir/rule
+
+# Convenience name for target.
+color_thresholding: CMakeFiles/color_thresholding.dir/rule
+
+.PHONY : color_thresholding
+
+# clean rule for target.
+CMakeFiles/color_thresholding.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/clean
+.PHONY : CMakeFiles/color_thresholding.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/geometry_msgs_generate_messages_cpp.dir
@@ -1044,6 +1133,33 @@ CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/tree_animation.dir
+
+# All Build rule for target.
+CMakeFiles/tree_animation.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target tree_animation"
+.PHONY : CMakeFiles/tree_animation.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tree_animation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tree_animation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/tree_animation.dir/rule
+
+# Convenience name for target.
+tree_animation: CMakeFiles/tree_animation.dir/rule
+
+.PHONY : tree_animation
+
+# clean rule for target.
+CMakeFiles/tree_animation.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/clean
+.PHONY : CMakeFiles/tree_animation.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/sensor_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
@@ -1077,7 +1193,7 @@ CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
 gtest/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=8,9,10,11 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=10,11,12,13 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1104,7 +1220,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=5,6,7 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=7,8,9 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1131,7 +1247,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target gtest"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1158,7 +1274,7 @@ gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean:
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target gtest_main"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.

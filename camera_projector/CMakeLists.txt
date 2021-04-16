@@ -206,7 +206,16 @@ include_directories(
 add_executable(aruco_detection src/aruco_detection.cpp)
 add_executable(aruco_corner_write src/aruco_corner_write )
 add_executable(project_checkerboard src/project_checkerboard.cpp src/utils_projections.h)
+add_executable(tree_detection  src/tree_detection.cpp )
+add_executable(tree_segmentation  src/tree_segmentation.cpp)
+add_executable(color_thresholding  src/color_thresholding.cpp)
+add_executable(tree_animation src/tree_animation.cpp)
+
 
 target_link_libraries(aruco_detection   ${catkin_LIBRARIES} ${OpenCV_LIBS})
 target_link_libraries(aruco_corner_write   ${catkin_LIBRARIES} ${OpenCV_LIBS})
 target_link_libraries(project_checkerboard ${catkin_LIBRARIES} ${OpenCV_LIBS})
+target_link_libraries(tree_detection ${catkin_LIBRARIES} ${OpenCV_LIBS})
+target_link_libraries(tree_segmentation ${catkin_LIBRARIES} ${OpenCV_LIBS})
+target_link_libraries(color_thresholding ${catkin_LIBRARIES} ${OpenCV_LIBS})
+target_link_libraries(tree_animation ${catkin_LIBRARIES} ${OpenCV_LIBS})

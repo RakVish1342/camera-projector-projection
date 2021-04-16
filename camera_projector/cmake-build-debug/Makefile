@@ -187,6 +187,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named tree_segmentation
+
+# Build rule for target.
+tree_segmentation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_segmentation
+.PHONY : tree_segmentation
+
+# fast build rule for target.
+tree_segmentation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/build
+.PHONY : tree_segmentation/fast
+
+#=============================================================================
+# Target rules for targets named tree_detection
+
+# Build rule for target.
+tree_detection: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_detection
+.PHONY : tree_detection
+
+# fast build rule for target.
+tree_detection/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/build
+.PHONY : tree_detection/fast
+
+#=============================================================================
 # Target rules for targets named aruco_detection
 
 # Build rule for target.
@@ -237,6 +263,19 @@ sensor_msgs_generate_messages_py: cmake_check_build_system
 sensor_msgs_generate_messages_py/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named color_thresholding
+
+# Build rule for target.
+color_thresholding: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 color_thresholding
+.PHONY : color_thresholding
+
+# fast build rule for target.
+color_thresholding/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/build
+.PHONY : color_thresholding/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_cpp
@@ -603,6 +642,19 @@ sensor_msgs_generate_messages_cpp/fast:
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named tree_animation
+
+# Build rule for target.
+tree_animation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_animation
+.PHONY : tree_animation
+
+# fast build rule for target.
+tree_animation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/build
+.PHONY : tree_animation/fast
+
+#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -721,6 +773,33 @@ src/aruco_detection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_detection.dir/build.make CMakeFiles/aruco_detection.dir/src/aruco_detection.cpp.s
 .PHONY : src/aruco_detection.cpp.s
 
+src/color_thresholding.o: src/color_thresholding.cpp.o
+
+.PHONY : src/color_thresholding.o
+
+# target to build an object file
+src/color_thresholding.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/src/color_thresholding.cpp.o
+.PHONY : src/color_thresholding.cpp.o
+
+src/color_thresholding.i: src/color_thresholding.cpp.i
+
+.PHONY : src/color_thresholding.i
+
+# target to preprocess a source file
+src/color_thresholding.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/src/color_thresholding.cpp.i
+.PHONY : src/color_thresholding.cpp.i
+
+src/color_thresholding.s: src/color_thresholding.cpp.s
+
+.PHONY : src/color_thresholding.s
+
+# target to generate assembly for a file
+src/color_thresholding.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/src/color_thresholding.cpp.s
+.PHONY : src/color_thresholding.cpp.s
+
 src/project_checkerboard.o: src/project_checkerboard.cpp.o
 
 .PHONY : src/project_checkerboard.o
@@ -747,6 +826,87 @@ src/project_checkerboard.s: src/project_checkerboard.cpp.s
 src/project_checkerboard.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_checkerboard.dir/build.make CMakeFiles/project_checkerboard.dir/src/project_checkerboard.cpp.s
 .PHONY : src/project_checkerboard.cpp.s
+
+src/tree_animation.o: src/tree_animation.cpp.o
+
+.PHONY : src/tree_animation.o
+
+# target to build an object file
+src/tree_animation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/src/tree_animation.cpp.o
+.PHONY : src/tree_animation.cpp.o
+
+src/tree_animation.i: src/tree_animation.cpp.i
+
+.PHONY : src/tree_animation.i
+
+# target to preprocess a source file
+src/tree_animation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/src/tree_animation.cpp.i
+.PHONY : src/tree_animation.cpp.i
+
+src/tree_animation.s: src/tree_animation.cpp.s
+
+.PHONY : src/tree_animation.s
+
+# target to generate assembly for a file
+src/tree_animation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/src/tree_animation.cpp.s
+.PHONY : src/tree_animation.cpp.s
+
+src/tree_detection.o: src/tree_detection.cpp.o
+
+.PHONY : src/tree_detection.o
+
+# target to build an object file
+src/tree_detection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/src/tree_detection.cpp.o
+.PHONY : src/tree_detection.cpp.o
+
+src/tree_detection.i: src/tree_detection.cpp.i
+
+.PHONY : src/tree_detection.i
+
+# target to preprocess a source file
+src/tree_detection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/src/tree_detection.cpp.i
+.PHONY : src/tree_detection.cpp.i
+
+src/tree_detection.s: src/tree_detection.cpp.s
+
+.PHONY : src/tree_detection.s
+
+# target to generate assembly for a file
+src/tree_detection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/src/tree_detection.cpp.s
+.PHONY : src/tree_detection.cpp.s
+
+src/tree_segmentation.o: src/tree_segmentation.cpp.o
+
+.PHONY : src/tree_segmentation.o
+
+# target to build an object file
+src/tree_segmentation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/src/tree_segmentation.cpp.o
+.PHONY : src/tree_segmentation.cpp.o
+
+src/tree_segmentation.i: src/tree_segmentation.cpp.i
+
+.PHONY : src/tree_segmentation.i
+
+# target to preprocess a source file
+src/tree_segmentation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/src/tree_segmentation.cpp.i
+.PHONY : src/tree_segmentation.cpp.i
+
+src/tree_segmentation.s: src/tree_segmentation.cpp.s
+
+.PHONY : src/tree_segmentation.s
+
+# target to generate assembly for a file
+src/tree_segmentation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/src/tree_segmentation.cpp.s
+.PHONY : src/tree_segmentation.cpp.s
 
 # Help Target
 help:
@@ -793,20 +953,36 @@ help:
 	@echo "... tests"
 	@echo "... aruco_corner_write"
 	@echo "... aruco_detection"
+	@echo "... color_thresholding"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... project_checkerboard"
+	@echo "... tree_animation"
+	@echo "... tree_detection"
+	@echo "... tree_segmentation"
 	@echo "... src/aruco_corner_write.o"
 	@echo "... src/aruco_corner_write.i"
 	@echo "... src/aruco_corner_write.s"
 	@echo "... src/aruco_detection.o"
 	@echo "... src/aruco_detection.i"
 	@echo "... src/aruco_detection.s"
+	@echo "... src/color_thresholding.o"
+	@echo "... src/color_thresholding.i"
+	@echo "... src/color_thresholding.s"
 	@echo "... src/project_checkerboard.o"
 	@echo "... src/project_checkerboard.i"
 	@echo "... src/project_checkerboard.s"
+	@echo "... src/tree_animation.o"
+	@echo "... src/tree_animation.i"
+	@echo "... src/tree_animation.s"
+	@echo "... src/tree_detection.o"
+	@echo "... src/tree_detection.i"
+	@echo "... src/tree_detection.s"
+	@echo "... src/tree_segmentation.o"
+	@echo "... src/tree_segmentation.i"
+	@echo "... src/tree_segmentation.s"
 .PHONY : help
 
 

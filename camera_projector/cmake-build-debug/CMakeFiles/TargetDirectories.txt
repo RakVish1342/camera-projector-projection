@@ -3,11 +3,14 @@
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/install.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/tree_segmentation.dir
+/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/tree_detection.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/test.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/aruco_detection.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/project_checkerboard.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/geometry_msgs_generate_messages_py.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/sensor_msgs_generate_messages_py.dir
+/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/color_thresholding.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
@@ -37,6 +40,7 @@
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/std_msgs_generate_messages_eus.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/tree_animation.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles/sensor_msgs_generate_messages_eus.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/gtest/CMakeFiles/install/strip.dir
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/gtest/CMakeFiles/install/local.dir

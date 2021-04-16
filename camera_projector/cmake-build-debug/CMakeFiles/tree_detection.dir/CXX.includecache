@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/tree_segmentation.cpp
+opencv2/highgui.hpp
+-
+opencv2/core/core.hpp
+/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/opencv2/core/core.hpp
+opencv2/imgproc/imgproc.hpp
+/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/opencv2/imgproc/imgproc.hpp
+
