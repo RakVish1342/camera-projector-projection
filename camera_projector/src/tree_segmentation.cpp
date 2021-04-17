@@ -38,9 +38,9 @@ void hsvMethod(Mat src, Mat& des){
     cv::bitwise_and(src_hsv, src_hsv, des, maskHSV);
     Mat mean_shifted_hsv;
     //meanShiftMethod(des, mean_shifted_hsv);
-    //imshow("HSV Image", des);
+    imshow("HSV Image", des);
 
-    imwrite("hsv_segmentation.jpg", des);
+    imwrite("hsv_segmentation1.jpg", des);
     waitKey(0);
 
 
@@ -64,7 +64,7 @@ int main(int argc, char** argv)
     cv::resize(img, img, cv::Size(), 0.5, 0.5);
     imshow("OriginalImage", img);
     Mat edge_detected;
-    edgeDetection(img, edge_detected);
+    //edgeDetection(img, edge_detected);
     /*Mat mean_shifted_img;
     meanShiftMethod(img, mean_shifted_img);*/
 

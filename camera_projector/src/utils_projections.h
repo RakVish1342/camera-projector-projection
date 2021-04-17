@@ -7,7 +7,7 @@
 #include <fstream>
 
 void writeCorners2File(cv::Mat corners, std::string corner_file_name){
-    std::ofstream fout(corner_file_name, std::ios::out | std::ios::app);
+    std::ofstream fout(corner_file_name, std::ios::out);
     std::cout<<"writing corner to file";
     std::cout<<corners<<std::endl;
     for(int i =0; i< corners.rows; i++){
@@ -29,10 +29,11 @@ void makeImgBlack(cv::Mat& img){
 }
 
 void addImages(cv::Mat& bg, cv::Mat img){
+    int start_loc_x = 250, start_loc_y = 1000;
     for(int i =0; i< img.rows; i++){
         for(int j=0; j<img.cols; j++){
 
-            bg.at<uchar>(i,j) = img.at<uchar>(i,j);
+            bg.at<uchar>(i + start_loc_x,j + start_loc_y) = img.at<uchar>(i,j);
         }
     }
 
