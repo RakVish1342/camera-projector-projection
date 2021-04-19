@@ -9,7 +9,7 @@
 #include <eigen3/Eigen/Dense>
 #include <eigen3/Eigen/Geometry>
 
-double marker_size = 0.07; 
+double marker_size = 0.139; 
 
 std::string image_topic_name = "/camera/color/image_raw";
 cv::Matx41d aa2quaternion(const cv::Vec3d& aa)

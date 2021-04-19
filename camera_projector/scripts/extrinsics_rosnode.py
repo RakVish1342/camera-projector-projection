@@ -5,6 +5,8 @@
 import pdb
 import rospy
 from geometry_msgs.msg import PoseStamped
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge, CvBridgeError
 
 import copy
 import math
@@ -31,12 +33,25 @@ class ProjectCorners:
 
     def execute(self):
         path = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images/"
-        filename = "img_from_topic.png"
+        filename = "img_from_topic_py27CVBridgeCompatibility.png"
         filename_aruco = "white_bg_aruco1.png"
 
         bRodriguesFirstComp = True
+        bridge = CvBridge()
 
+        # img = plt.imread(path+filename, "bgr8") # If format to read it in is not mentioned, then pixels are in 0-1 range.
+        # Trying to calibrate on live image rather than on the stored image which was used long back
+        # print("Waiting for topic /camera/color/image_raw_py27CVBridgeCompatibility ...")
+        # flag = False
+        # while(not flag):
+        #     msg = rospy.wait_for_message("/camera/color/image_raw_py27CVBridgeCompatibility", Bool, timeout=None)
+        # print("Received image data.")
+        # img = bridge.imgmsg_to_cv2(msg, "bgr8")
         img = plt.imread(path+filename, "bgr8") # If format to read it in is not mentioned, then pixels are in 0-1 range.
+
+
+
+
         img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         # plt.imshow(img_gray, cmap="gray")
         # plt.show()
@@ -264,10 +279,10 @@ class ProjectCorners:
         print("IMG PTS")
         print(imgpts)
 
-        pdb.set_trace()
-
-        off_x = 40+638
-        off_y = 250+255
+        # off_x = 40+638
+        # off_y = 250+255
+        off_x = 620
+        off_y = 520
         img_corners[0][0][0] = img_corners[0][0][0] + off_x
         img_corners[0][0][1] = img_corners[0][0][1] + off_y
 

@@ -77,7 +77,9 @@ class ProjectCorners:
         sq_len = 0.0185 # 18.5mm
 
         D = np.zeros((4,1)) # No lens distortion as per ros topic
-        K = np.array( [[385.2106018066406, 0.0, 318.61053466796875], [0.0, 385.2106018066406, 242.80691528320312], [0.0, 0.0, 1.0]] )
+        # K = np.array( [[385.2106018066406, 0.0, 318.61053466796875], [0.0, 385.2106018066406, 242.80691528320312], [0.0, 0.0, 1.0]] )
+        # [614.62353515625, 0.0, 327.8028869628906, 0.0, 614.45849609375, 238.79359436035156, 0.0, 0.0, 1.0]
+        K = np.array( [[614.62353515625, 0.0, 327.8028869628906], [0.0, 614.45849609375, 238.79359436035156], [0.0, 0.0, 1.0]] )
         R = [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
         P = [[385.2106018066406, 0.0, 318.61053466796875], [0.0, 0.0, 385.2106018066406], [242.80691528320312, 0.0, 0.0, 0.0, 1.0, 0.0]]
 
@@ -187,7 +189,6 @@ class ProjectCorners:
                     corns.append(pt)
             corner_array.append(corns)
 
-        pdb.set_trace()
 
         # if(ret):
         #     print(corners)
@@ -224,9 +225,6 @@ class ProjectCorners:
             # obj_pts = np.array(obj_pts) # DO NOT convert to np array just yet.
             # print(obj_pts)
             obj_array.append(obj_pts)
-        
-        # Inter change X and Y in object points??
-        pdb.set_trace()
 
         # objpoints = np.array([obj_pts], dtype="float32")
         objpoints = np.array(obj_array, dtype="float32")
@@ -245,6 +243,7 @@ class ProjectCorners:
         print("R and P __pr")
         print( rvecs_mat_pr )
         print(tvecs_)
+
 
         # If intrinsics already known, can obtain extrinsincs using this:
         # ret,rvecs_pr, tvecs_pr = cv2.solvePnP(obj_pts, corners, K_pr, D_pr, flags=cv2.cv2.SOLVEPNP_ITERATIVE)
@@ -280,14 +279,18 @@ class ProjectCorners:
         homo_o_c[0:3, 3] = tvecs.reshape(3)
         homo_o_c[3][3] = 1
 
-        tmp_trans = homo_o_c[0:3, 3]
-        tmp_rot = homo_o_c[0:3, 0:3]
-        tmp_rot_inv = np.linalg.inv(tmp_rot)
-        homo_c_o = np.zeros((4,4))
-        homo_c_o[0:3, 0:3] = tmp_rot_inv
-        homo_o_c[0:3, 3] = -tmp_rot_inv.dot(tmp_trans) # tmp_rot_inv * tmp_trans
+        # tmp_trans = homo_o_c[0:3, 3]
+        # tmp_rot = homo_o_c[0:3, 0:3]
+        # tmp_rot_inv = np.linalg.inv(tmp_rot)
+        # homo_c_o = np.zeros((4,4))
+        # homo_c_o[0:3, 0:3] = tmp_rot_inv
+        # # homo_o_c[0:3, 3] = -tmp_rot_inv.dot(tmp_trans) # tmp_rot_inv * tmp_trans
+        # homo_c_o[0:3, 3] = -tmp_rot_inv.dot(tmp_trans) # tmp_rot_inv * tmp_trans
+        # homo_c_p = homo_o_p * homo_c_o
 
-        homo_c_p = homo_o_p * homo_c_o
+        homo_c_o = np.linalg.inv(homo_o_c)
+        homo_c_p =  homo_c_o * homo_o_p
+
 
         print("Camera in Projector's Frame: H_c_p")
         print(homo_c_p)
@@ -316,7 +319,8 @@ class ProjectCorners:
         print("---OBJ")
         print(object_corners)
 
-        img_corners, jac_corners = cv2.projectPoints(object_corners, rvecs_pr, tvecs_pr, K_pr, D_pr)
+        # img_corners, jac_corners = cv2.projectPoints(object_corners, rvecs_pr, tvecs_pr, K_pr, D_pr)
+        img_corners, jac_corners = cv2.projectPoints(object_corners, rvecs_pr, np.array([0.0,0.0,0.0]), K_pr, D_pr)
         print("===")
 
         img_aruco = plt.imread(path+filename_aruco, "bgr8")
@@ -329,8 +333,10 @@ class ProjectCorners:
 
         # off_x = 40+638
         # off_y = 250+255
-        off_x = 620
-        off_y = 520
+        # off_x = 620
+        # off_y = 520
+        off_x = 0
+        off_y = 0        
         img_corners[0][0][0] = img_corners[0][0][0] + off_x
         img_corners[0][0][1] = img_corners[0][0][1] + off_y
 
@@ -354,6 +360,41 @@ class ProjectCorners:
         print(img_corners)
         cv2.imwrite(path+"out.png", img_aruco)
         plt.imshow(img_aruco)
+        plt.show()
+
+
+
+        print("====================")
+        # K_pr = np.array(K_pr)
+        # print(  K_pr.dot(object_corners[0])/object_corners[0][2] )
+        # print(  K_pr.dot(object_corners[1])/object_corners[1][2] )
+        # print(  K_pr.dot(object_corners[2])/object_corners[2][2] )
+        # print(  K_pr.dot(object_corners[3])/object_corners[3][2] )
+
+
+        pdb.set_trace()
+
+        immm = cv2.imread(path+"tmp_image.png")
+        immm_gray = cv2.cvtColor(immm, cv2.COLOR_BGR2GRAY)
+
+
+
+        pt1=K.dot(object_corners[0])/object_corners[0][2]
+        pt2=K.dot(object_corners[1])/object_corners[1][2]
+        pt3=K.dot(object_corners[2])/object_corners[2][2]
+        pt4=K.dot(object_corners[3])/object_corners[3][2]
+
+        print(  K.dot(object_corners[0])/object_corners[0][2] )
+        print(  K.dot(object_corners[1])/object_corners[1][2] )
+        print(  K.dot(object_corners[2])/object_corners[2][2] )
+        print(  K.dot(object_corners[3])/object_corners[3][2] )
+        cv2.circle(immm_gray, tuple((int(pt1[0]), int(pt1[1]))), 15, (255,0,0), 5)
+        cv2.circle(immm_gray, tuple((int(pt2[0]), int(pt2[1]))), 15, (0,255,0), 5)
+        cv2.circle(immm_gray, tuple((int(pt3[0]), int(pt3[1]))), 15, (0,0,255), 5)
+        cv2.circle(immm_gray, tuple((int(pt4[0]), int(pt4[1]))), 15, (255,0,255), 5)
+        print("---IMG__DIRECT_CAMERA_K")
+        cv2.imwrite(path+"out.png", img_aruco)
+        plt.imshow(immm_gray, cmap="gray")
         plt.show()
 
         print("Done Saving. Exiting...")
