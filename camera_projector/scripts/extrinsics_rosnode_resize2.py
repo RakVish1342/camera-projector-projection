@@ -23,7 +23,7 @@ class ProjectCorners:
         # filename_aruco = "tmp_image.png"
 
         print("Waiting for topics1...")
-        object_corner_tl = rospy.wait_for_message("/camera_aruco/corner_tl", PoseStamped, timeout=None)
+            object_corner_tl = rospy.wait_for_message("/camera_aruco/corner_tl", PoseStamped, timeout=None)
         print("Waiting for topics2...")
         object_corner_tr = rospy.wait_for_message("/camera_aruco/corner_tr", PoseStamped, timeout=None)
         print("Waiting for topics3...")

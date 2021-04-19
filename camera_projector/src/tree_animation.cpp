@@ -6,10 +6,10 @@
 #include <opencv2/opencv.hpp>
 #include "utils_projections.h"
 
-std::string image_path = "/home/alg/Downloads/complex_tree.jpg";
+std::string aruco_image_path = "/home/alg/Downloads/complex_tree.jpg";
 int main(){
     //get the mask
-    cv::Mat mask = cv::imread(image_path);
+    cv::Mat mask = cv::imread(aruco_image_path);
     cv::cvtColor(mask, mask, CV_BGR2GRAY);
 
     //black background image

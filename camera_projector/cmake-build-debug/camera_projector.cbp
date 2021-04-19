@@ -27,48 +27,8 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="install/local">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="tree_segmentation">
-				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_segmentation" prefix_auto="0" extension_auto="0"/>
+			<Target title="tree_animation">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_animation" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -90,14 +50,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_segmentation"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_animation"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="tree_segmentation/fast">
-				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_segmentation" prefix_auto="0" extension_auto="0"/>
+			<Target title="tree_animation/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_animation" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -119,379 +79,147 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_segmentation/fast"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_animation/fast"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="tree_detection">
-				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_detection" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_detection"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="tree_detection/fast">
-				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_detection" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_detection/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test">
+			<Target title="sensor_msgs_generate_messages_cpp">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="aruco_detection">
-				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/aruco_detection" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 aruco_detection"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="aruco_detection/fast">
-				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/aruco_detection" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 aruco_detection/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="project_checkerboard">
-				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/project_checkerboard" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 project_checkerboard"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="project_checkerboard/fast">
-				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/project_checkerboard" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 project_checkerboard/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="geometry_msgs_generate_messages_py">
+			<Target title="std_msgs_generate_messages_eus">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 geometry_msgs_generate_messages_py"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 std_msgs_generate_messages_eus"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="sensor_msgs_generate_messages_py">
+			<Target title="roscpp_generate_messages_lisp">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_py"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 roscpp_generate_messages_lisp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="color_thresholding">
-				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/color_thresholding" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 color_thresholding"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="color_thresholding/fast">
-				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/color_thresholding" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 color_thresholding/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="geometry_msgs_generate_messages_cpp">
+			<Target title="std_msgs_generate_messages_py">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 geometry_msgs_generate_messages_cpp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 std_msgs_generate_messages_py"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="sensor_msgs_generate_messages_nodejs">
+			<Target title="rosgraph_msgs_generate_messages_py">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_nodejs"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 rosgraph_msgs_generate_messages_py"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="sensor_msgs_generate_messages_lisp">
+			<Target title="rosgraph_msgs_generate_messages_lisp">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_lisp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 rosgraph_msgs_generate_messages_lisp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="roscpp_generate_messages_py">
+			<Target title="tests">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 roscpp_generate_messages_py"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rosgraph_msgs_generate_messages_eus">
+			<Target title="roscpp_generate_messages_nodejs">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 rosgraph_msgs_generate_messages_eus"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 roscpp_generate_messages_nodejs"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="geometry_msgs_generate_messages_nodejs">
+			<Target title="rosgraph_msgs_generate_messages_cpp">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 geometry_msgs_generate_messages_nodejs"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 rosgraph_msgs_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="clean_test_results">
+			<Target title="sensor_msgs_generate_messages_eus">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean_test_results"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_eus"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="std_msgs_generate_messages_nodejs">
+			<Target title="std_msgs_generate_messages_cpp">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 std_msgs_generate_messages_nodejs"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 std_msgs_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="geometry_msgs_generate_messages_eus">
+			<Target title="run_tests">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 geometry_msgs_generate_messages_eus"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_tests"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="roscpp_generate_messages_cpp">
+			<Target title="doxygen">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 roscpp_generate_messages_cpp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 doxygen"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="roscpp_generate_messages_eus">
+			<Target title="geometry_msgs_generate_messages_lisp">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 roscpp_generate_messages_eus"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 geometry_msgs_generate_messages_lisp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -555,6 +283,76 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="roscpp_generate_messages_eus">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 roscpp_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="roscpp_generate_messages_cpp">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 roscpp_generate_messages_cpp"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="geometry_msgs_generate_messages_eus">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 geometry_msgs_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="geometry_msgs_generate_messages_nodejs">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 geometry_msgs_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rosgraph_msgs_generate_messages_eus">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 rosgraph_msgs_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="roscpp_generate_messages_py">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 roscpp_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="download_extra_data">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
@@ -565,61 +363,361 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="geometry_msgs_generate_messages_lisp">
+			<Target title="sensor_msgs_generate_messages_lisp">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 geometry_msgs_generate_messages_lisp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_lisp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="std_msgs_generate_messages_lisp">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
+			<Target title="camera_projector_aruco">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/camera_projector_aruco" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 std_msgs_generate_messages_lisp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 camera_projector_aruco"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="doxygen">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
+			<Target title="camera_projector_aruco/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/camera_projector_aruco" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 doxygen"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 camera_projector_aruco/fast"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="run_tests">
+			<Target title="sensor_msgs_generate_messages_nodejs">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_tests"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_nodejs"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="std_msgs_generate_messages_cpp">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
+			<Target title="color_thresholding">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/color_thresholding" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 std_msgs_generate_messages_cpp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 color_thresholding"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rosgraph_msgs_generate_messages_cpp">
+			<Target title="color_thresholding/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/color_thresholding" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 color_thresholding/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project_aruco">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/project_aruco" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 project_aruco"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project_aruco/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/project_aruco" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 project_aruco/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sensor_msgs_generate_messages_py">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 rosgraph_msgs_generate_messages_cpp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="std_msgs_generate_messages_nodejs">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 std_msgs_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="geometry_msgs_generate_messages_py">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 geometry_msgs_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project_checkerboard">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/project_checkerboard" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 project_checkerboard"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="project_checkerboard/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/project_checkerboard" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 project_checkerboard/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="aruco_detection">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/aruco_detection" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 aruco_detection"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="aruco_detection/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/aruco_detection" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 aruco_detection/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="geometry_msgs_generate_messages_cpp">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 geometry_msgs_generate_messages_cpp"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -635,98 +733,8 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="roscpp_generate_messages_nodejs">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 roscpp_generate_messages_nodejs"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="tests">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rosgraph_msgs_generate_messages_lisp">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 rosgraph_msgs_generate_messages_lisp"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rosgraph_msgs_generate_messages_py">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 rosgraph_msgs_generate_messages_py"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="std_msgs_generate_messages_py">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 std_msgs_generate_messages_py"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="roscpp_generate_messages_lisp">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 roscpp_generate_messages_lisp"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="std_msgs_generate_messages_eus">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 std_msgs_generate_messages_eus"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="sensor_msgs_generate_messages_cpp">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_cpp"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="tree_animation">
-				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_animation" prefix_auto="0" extension_auto="0"/>
+			<Target title="tree_detection">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_detection" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -748,14 +756,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_animation"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_detection"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="tree_animation/fast">
-				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_animation" prefix_auto="0" extension_auto="0"/>
+			<Target title="tree_detection/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_detection" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -777,17 +785,183 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_animation/fast"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_detection/fast"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="sensor_msgs_generate_messages_eus">
+			<Target title="clean_test_results">
 				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_eus"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean_test_results"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="aruco_project_border">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/aruco_project_border" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 aruco_project_border"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="aruco_project_border/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/aruco_project_border" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 aruco_project_border/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tree_segmentation">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_segmentation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_segmentation"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tree_segmentation/fast">
+				<Option output="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector/tree_segmentation" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/devel/lib/camera_projector"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;camera_projector&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 tree_segmentation/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="std_msgs_generate_messages_lisp">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 std_msgs_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1010,14 +1184,26 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/PixelCalculations.h">
+			<Option target="camera_projector_aruco"/>
+		</Unit>
 		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/aruco_corner_write.cpp">
 			<Option target="aruco_corner_write"/>
 		</Unit>
 		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/aruco_detection.cpp">
 			<Option target="aruco_detection"/>
 		</Unit>
+		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/aruco_project_border.cpp">
+			<Option target="aruco_project_border"/>
+		</Unit>
+		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/camera_projector_aruco.cpp">
+			<Option target="camera_projector_aruco"/>
+		</Unit>
 		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/color_thresholding.cpp">
 			<Option target="color_thresholding"/>
+		</Unit>
+		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/project_aruco.cpp">
+			<Option target="project_aruco"/>
 		</Unit>
 		<Unit filename="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/project_checkerboard.cpp">
 			<Option target="project_checkerboard"/>

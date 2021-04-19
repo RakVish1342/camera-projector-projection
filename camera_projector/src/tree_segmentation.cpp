@@ -10,7 +10,7 @@ using namespace cv;
 using namespace std;
 
 
-string image_path = "/home/alg/Downloads/asu_tree4.jpg";
+string aruco_image_path = "/home/alg/Downloads/asu_tree4.jpg";
 
 void meanShiftMethod(Mat src, Mat& res ){
     GaussianBlur(src, res, Size(5,5), 2, 2);
@@ -60,7 +60,7 @@ int main(int argc, char** argv)
 {
     Mat img, res, element;
     //namedWindow( "Meanshift", 0 );
-    img = imread( image_path );
+    img = imread(aruco_image_path );
     cv::resize(img, img, cv::Size(), 0.5, 0.5);
     imshow("OriginalImage", img);
     Mat edge_detected;

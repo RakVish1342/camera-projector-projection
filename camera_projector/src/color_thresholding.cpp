@@ -9,7 +9,7 @@
 using namespace cv;
 using namespace std;
 
-string image_path = "/home/alg/Downloads/asu_tree4.jpg";
+string aruco_image_path = "/home/alg/Downloads/asu_tree4.jpg";
 int main( int argc, char** argv )
 {
 
@@ -36,7 +36,7 @@ int main( int argc, char** argv )
     cvCreateTrackbar("LowV", "Control", &iLowV, 255); //Value (0 - 255)
     cvCreateTrackbar("HighV", "Control", &iHighV, 255);
 
-    Mat imgOriginal = imread(image_path);
+    Mat imgOriginal = imread(aruco_image_path);
     Mat imgHSV;
 
     cvtColor(imgOriginal, imgHSV, COLOR_BGR2HSV); //Convert the captured frame from BGR to HSV

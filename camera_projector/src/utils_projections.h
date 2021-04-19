@@ -29,7 +29,7 @@ void makeImgBlack(cv::Mat& img){
 }
 
 void addImages(cv::Mat& bg, cv::Mat img){
-    int start_loc_x = 250, start_loc_y = 1000;
+    int start_loc_x = 250, start_loc_y = 250;
     for(int i =0; i< img.rows; i++){
         for(int j=0; j<img.cols; j++){
 

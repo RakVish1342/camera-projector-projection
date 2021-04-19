@@ -13,12 +13,12 @@
  * (500, 1000) = (7.2, 14.1)
  *
  * */
-std::string image_path = "/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/data/images/checkerboard_cropped.png";
+std::string aruco_image_path = "/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/data/images/checkerboard_cropped.png";
 std::string corner_file_name="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/data/images/temmp.txt";
 const double scale = 0.2;
 int main(){
     //load the checkerboard image
-    cv::Mat checkerboard_img = cv::imread(image_path);
+    cv::Mat checkerboard_img = cv::imread(aruco_image_path);
     cv::cvtColor(checkerboard_img, checkerboard_img, CV_BGR2GRAY);
 
     //resize image
@@ -40,6 +40,9 @@ int main(){
     cv::Mat corners;
     if(cv::findChessboardCorners(background_white_img, cv::Size(8, 6), corners ))
         std::cout<<"corners_written"<<std::endl;
+    cv::drawChessboardCorners(background_white_img, cv::Size(8, 6), corners, true);
+    cv::imshow("Detected Corners", background_white_img );
+    cv::waitKey(0);
 
     //send the corners to a file
     writeCorners2File(corners, corner_file_name);

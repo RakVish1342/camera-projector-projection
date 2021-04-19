@@ -72,13 +72,16 @@ CMAKE_BINARY_DIR = /home/alg/projection_mapping/projection_ws/src/camera-project
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/tree_segmentation.dir/all
-all: CMakeFiles/tree_detection.dir/all
-all: CMakeFiles/aruco_detection.dir/all
-all: CMakeFiles/project_checkerboard.dir/all
-all: CMakeFiles/color_thresholding.dir/all
-all: CMakeFiles/aruco_corner_write.dir/all
 all: CMakeFiles/tree_animation.dir/all
+all: CMakeFiles/aruco_corner_write.dir/all
+all: CMakeFiles/camera_projector_aruco.dir/all
+all: CMakeFiles/color_thresholding.dir/all
+all: CMakeFiles/project_aruco.dir/all
+all: CMakeFiles/project_checkerboard.dir/all
+all: CMakeFiles/aruco_detection.dir/all
+all: CMakeFiles/tree_detection.dir/all
+all: CMakeFiles/aruco_project_border.dir/all
+all: CMakeFiles/tree_segmentation.dir/all
 all: gtest/all
 
 .PHONY : all
@@ -89,43 +92,46 @@ preinstall: gtest/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/tree_segmentation.dir/clean
-clean: CMakeFiles/tree_detection.dir/clean
-clean: CMakeFiles/aruco_detection.dir/clean
-clean: CMakeFiles/project_checkerboard.dir/clean
-clean: CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-clean: CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
-clean: CMakeFiles/color_thresholding.dir/clean
-clean: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-clean: CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
-clean: CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
-clean: CMakeFiles/roscpp_generate_messages_py.dir/clean
-clean: CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-clean: CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-clean: CMakeFiles/clean_test_results.dir/clean
-clean: CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-clean: CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-clean: CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-clean: CMakeFiles/roscpp_generate_messages_eus.dir/clean
-clean: CMakeFiles/aruco_corner_write.dir/clean
-clean: CMakeFiles/download_extra_data.dir/clean
-clean: CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
-clean: CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-clean: CMakeFiles/doxygen.dir/clean
-clean: CMakeFiles/run_tests.dir/clean
-clean: CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-clean: CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-clean: CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-clean: CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-clean: CMakeFiles/tests.dir/clean
-clean: CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-clean: CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-clean: CMakeFiles/std_msgs_generate_messages_py.dir/clean
-clean: CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-clean: CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-clean: CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 clean: CMakeFiles/tree_animation.dir/clean
+clean: CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+clean: CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+clean: CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+clean: CMakeFiles/std_msgs_generate_messages_py.dir/clean
+clean: CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+clean: CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+clean: CMakeFiles/tests.dir/clean
+clean: CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+clean: CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 clean: CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+clean: CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+clean: CMakeFiles/run_tests.dir/clean
+clean: CMakeFiles/doxygen.dir/clean
+clean: CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+clean: CMakeFiles/aruco_corner_write.dir/clean
+clean: CMakeFiles/roscpp_generate_messages_eus.dir/clean
+clean: CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+clean: CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+clean: CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+clean: CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+clean: CMakeFiles/roscpp_generate_messages_py.dir/clean
+clean: CMakeFiles/download_extra_data.dir/clean
+clean: CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+clean: CMakeFiles/camera_projector_aruco.dir/clean
+clean: CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+clean: CMakeFiles/color_thresholding.dir/clean
+clean: CMakeFiles/project_aruco.dir/clean
+clean: CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+clean: CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+clean: CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+clean: CMakeFiles/project_checkerboard.dir/clean
+clean: CMakeFiles/aruco_detection.dir/clean
+clean: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+clean: CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+clean: CMakeFiles/tree_detection.dir/clean
+clean: CMakeFiles/clean_test_results.dir/clean
+clean: CMakeFiles/aruco_project_border.dir/clean
+clean: CMakeFiles/tree_segmentation.dir/clean
+clean: CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 clean: gtest/clean
 
 .PHONY : clean
@@ -188,922 +194,31 @@ gtest/googlemock/gtest/clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/c
 .PHONY : gtest/googlemock/gtest/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/tree_segmentation.dir
+# Target rules for target CMakeFiles/tree_animation.dir
 
 # All Build rule for target.
-CMakeFiles/tree_segmentation.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=24,25 "Built target tree_segmentation"
-.PHONY : CMakeFiles/tree_segmentation.dir/all
+CMakeFiles/tree_animation.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=26,27 "Built target tree_animation"
+.PHONY : CMakeFiles/tree_animation.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/tree_segmentation.dir/rule: cmake_check_build_system
+CMakeFiles/tree_animation.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tree_segmentation.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tree_animation.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/tree_segmentation.dir/rule
+.PHONY : CMakeFiles/tree_animation.dir/rule
 
 # Convenience name for target.
-tree_segmentation: CMakeFiles/tree_segmentation.dir/rule
+tree_animation: CMakeFiles/tree_animation.dir/rule
 
-.PHONY : tree_segmentation
-
-# clean rule for target.
-CMakeFiles/tree_segmentation.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/clean
-.PHONY : CMakeFiles/tree_segmentation.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/tree_detection.dir
-
-# All Build rule for target.
-CMakeFiles/tree_detection.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target tree_detection"
-.PHONY : CMakeFiles/tree_detection.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/tree_detection.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tree_detection.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/tree_detection.dir/rule
-
-# Convenience name for target.
-tree_detection: CMakeFiles/tree_detection.dir/rule
-
-.PHONY : tree_detection
+.PHONY : tree_animation
 
 # clean rule for target.
-CMakeFiles/tree_detection.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/clean
-.PHONY : CMakeFiles/tree_detection.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/aruco_detection.dir
-
-# All Build rule for target.
-CMakeFiles/aruco_detection.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_detection.dir/build.make CMakeFiles/aruco_detection.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_detection.dir/build.make CMakeFiles/aruco_detection.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target aruco_detection"
-.PHONY : CMakeFiles/aruco_detection.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/aruco_detection.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/aruco_detection.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/aruco_detection.dir/rule
-
-# Convenience name for target.
-aruco_detection: CMakeFiles/aruco_detection.dir/rule
-
-.PHONY : aruco_detection
-
-# clean rule for target.
-CMakeFiles/aruco_detection.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_detection.dir/build.make CMakeFiles/aruco_detection.dir/clean
-.PHONY : CMakeFiles/aruco_detection.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/project_checkerboard.dir
-
-# All Build rule for target.
-CMakeFiles/project_checkerboard.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_checkerboard.dir/build.make CMakeFiles/project_checkerboard.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_checkerboard.dir/build.make CMakeFiles/project_checkerboard.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=18,19 "Built target project_checkerboard"
-.PHONY : CMakeFiles/project_checkerboard.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/project_checkerboard.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/project_checkerboard.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/project_checkerboard.dir/rule
-
-# Convenience name for target.
-project_checkerboard: CMakeFiles/project_checkerboard.dir/rule
-
-.PHONY : project_checkerboard
-
-# clean rule for target.
-CMakeFiles/project_checkerboard.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_checkerboard.dir/build.make CMakeFiles/project_checkerboard.dir/clean
-.PHONY : CMakeFiles/project_checkerboard.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/geometry_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# clean rule for target.
-CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/sensor_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
-.PHONY : CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_py
-
-# clean rule for target.
-CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
-.PHONY : CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/color_thresholding.dir
-
-# All Build rule for target.
-CMakeFiles/color_thresholding.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target color_thresholding"
-.PHONY : CMakeFiles/color_thresholding.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/color_thresholding.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/color_thresholding.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/color_thresholding.dir/rule
-
-# Convenience name for target.
-color_thresholding: CMakeFiles/color_thresholding.dir/rule
-
-.PHONY : color_thresholding
-
-# clean rule for target.
-CMakeFiles/color_thresholding.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/clean
-.PHONY : CMakeFiles/color_thresholding.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/geometry_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# clean rule for target.
-CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
-.PHONY : CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# clean rule for target.
-CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
-.PHONY : CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/sensor_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
-.PHONY : CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# clean rule for target.
-CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
-.PHONY : CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/roscpp_generate_messages_py.dir
-
-# All Build rule for target.
-CMakeFiles/roscpp_generate_messages_py.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
-.PHONY : CMakeFiles/roscpp_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# clean rule for target.
-CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/clean
-.PHONY : CMakeFiles/roscpp_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# clean rule for target.
-CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# clean rule for target.
-CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/clean_test_results.dir
-
-# All Build rule for target.
-CMakeFiles/clean_test_results.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target clean_test_results"
-.PHONY : CMakeFiles/clean_test_results.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/clean_test_results.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/clean_test_results.dir/rule
-
-# Convenience name for target.
-clean_test_results: CMakeFiles/clean_test_results.dir/rule
-
-.PHONY : clean_test_results
-
-# clean rule for target.
-CMakeFiles/clean_test_results.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/clean
-.PHONY : CMakeFiles/clean_test_results.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/std_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
-.PHONY : CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# clean rule for target.
-CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-.PHONY : CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/geometry_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_eus
-
-# clean rule for target.
-CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/roscpp_generate_messages_cpp.dir
-
-# All Build rule for target.
-CMakeFiles/roscpp_generate_messages_cpp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
-.PHONY : CMakeFiles/roscpp_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# clean rule for target.
-CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-.PHONY : CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/roscpp_generate_messages_eus.dir
-
-# All Build rule for target.
-CMakeFiles/roscpp_generate_messages_eus.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_eus.dir/build.make CMakeFiles/roscpp_generate_messages_eus.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_eus.dir/build.make CMakeFiles/roscpp_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
-.PHONY : CMakeFiles/roscpp_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# clean rule for target.
-CMakeFiles/roscpp_generate_messages_eus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_eus.dir/build.make CMakeFiles/roscpp_generate_messages_eus.dir/clean
-.PHONY : CMakeFiles/roscpp_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/aruco_corner_write.dir
-
-# All Build rule for target.
-CMakeFiles/aruco_corner_write.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_corner_write.dir/build.make CMakeFiles/aruco_corner_write.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_corner_write.dir/build.make CMakeFiles/aruco_corner_write.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target aruco_corner_write"
-.PHONY : CMakeFiles/aruco_corner_write.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/aruco_corner_write.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/aruco_corner_write.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/aruco_corner_write.dir/rule
-
-# Convenience name for target.
-aruco_corner_write: CMakeFiles/aruco_corner_write.dir/rule
-
-.PHONY : aruco_corner_write
-
-# clean rule for target.
-CMakeFiles/aruco_corner_write.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_corner_write.dir/build.make CMakeFiles/aruco_corner_write.dir/clean
-.PHONY : CMakeFiles/aruco_corner_write.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/download_extra_data.dir
-
-# All Build rule for target.
-CMakeFiles/download_extra_data.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target download_extra_data"
-.PHONY : CMakeFiles/download_extra_data.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/download_extra_data.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/download_extra_data.dir/rule
-
-# Convenience name for target.
-download_extra_data: CMakeFiles/download_extra_data.dir/rule
-
-.PHONY : download_extra_data
-
-# clean rule for target.
-CMakeFiles/download_extra_data.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/clean
-.PHONY : CMakeFiles/download_extra_data.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/geometry_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# clean rule for target.
-CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
-.PHONY : CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/std_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
-.PHONY : CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# clean rule for target.
-CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-.PHONY : CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/doxygen.dir
-
-# All Build rule for target.
-CMakeFiles/doxygen.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target doxygen"
-.PHONY : CMakeFiles/doxygen.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/doxygen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/doxygen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/doxygen.dir/rule
-
-# Convenience name for target.
-doxygen: CMakeFiles/doxygen.dir/rule
-
-.PHONY : doxygen
-
-# clean rule for target.
-CMakeFiles/doxygen.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/clean
-.PHONY : CMakeFiles/doxygen.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/run_tests.dir
-
-# All Build rule for target.
-CMakeFiles/run_tests.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target run_tests"
-.PHONY : CMakeFiles/run_tests.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/run_tests.dir/rule
-
-# Convenience name for target.
-run_tests: CMakeFiles/run_tests.dir/rule
-
-.PHONY : run_tests
-
-# clean rule for target.
-CMakeFiles/run_tests.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/clean
-.PHONY : CMakeFiles/run_tests.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/std_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
-.PHONY : CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# clean rule for target.
-CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-.PHONY : CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# clean rule for target.
-CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# clean rule for target.
-CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/roscpp_generate_messages_nodejs.dir
-
-# All Build rule for target.
-CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
-.PHONY : CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# clean rule for target.
-CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-.PHONY : CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/tests.dir
-
-# All Build rule for target.
-CMakeFiles/tests.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target tests"
-.PHONY : CMakeFiles/tests.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/tests.dir/rule
-
-# Convenience name for target.
-tests: CMakeFiles/tests.dir/rule
-
-.PHONY : tests
-
-# clean rule for target.
-CMakeFiles/tests.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/clean
-.PHONY : CMakeFiles/tests.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# clean rule for target.
-CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# clean rule for target.
-CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/std_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-CMakeFiles/std_msgs_generate_messages_py.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
-.PHONY : CMakeFiles/std_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# clean rule for target.
-CMakeFiles/std_msgs_generate_messages_py.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/clean
-.PHONY : CMakeFiles/std_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/roscpp_generate_messages_lisp.dir
-
-# All Build rule for target.
-CMakeFiles/roscpp_generate_messages_lisp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
-.PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# clean rule for target.
-CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-.PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/std_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-CMakeFiles/std_msgs_generate_messages_eus.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
-.PHONY : CMakeFiles/std_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# clean rule for target.
-CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-.PHONY : CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+CMakeFiles/tree_animation.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/clean
+.PHONY : CMakeFiles/tree_animation.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/sensor_msgs_generate_messages_cpp.dir
@@ -1133,31 +248,220 @@ CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/tree_animation.dir
+# Target rules for target CMakeFiles/std_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-CMakeFiles/tree_animation.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target tree_animation"
-.PHONY : CMakeFiles/tree_animation.dir/all
+CMakeFiles/std_msgs_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
+.PHONY : CMakeFiles/std_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/tree_animation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tree_animation.dir/all
+CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/tree_animation.dir/rule
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-tree_animation: CMakeFiles/tree_animation.dir/rule
+std_msgs_generate_messages_eus: CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
-.PHONY : tree_animation
+.PHONY : std_msgs_generate_messages_eus
 
 # clean rule for target.
-CMakeFiles/tree_animation.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_animation.dir/build.make CMakeFiles/tree_animation.dir/clean
-.PHONY : CMakeFiles/tree_animation.dir/clean
+CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+.PHONY : CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/roscpp_generate_messages_lisp.dir
+
+# All Build rule for target.
+CMakeFiles/roscpp_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
+.PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+.PHONY : roscpp_generate_messages_lisp
+
+# clean rule for target.
+CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/std_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+CMakeFiles/std_msgs_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
+.PHONY : CMakeFiles/std_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+.PHONY : std_msgs_generate_messages_py
+
+# clean rule for target.
+CMakeFiles/std_msgs_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/clean
+.PHONY : CMakeFiles/std_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# clean rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# clean rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tests.dir
+
+# All Build rule for target.
+CMakeFiles/tests.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target tests"
+.PHONY : CMakeFiles/tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: CMakeFiles/tests.dir/rule
+
+.PHONY : tests
+
+# clean rule for target.
+CMakeFiles/tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/clean
+.PHONY : CMakeFiles/tests.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/roscpp_generate_messages_nodejs.dir
+
+# All Build rule for target.
+CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
+.PHONY : CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_nodejs: CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+.PHONY : roscpp_generate_messages_nodejs
+
+# clean rule for target.
+CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+.PHONY : CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# clean rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/sensor_msgs_generate_messages_eus.dir
@@ -1187,13 +491,796 @@ CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/std_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
+.PHONY : CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# clean rule for target.
+CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+.PHONY : CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/run_tests.dir
+
+# All Build rule for target.
+CMakeFiles/run_tests.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target run_tests"
+.PHONY : CMakeFiles/run_tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/run_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/run_tests.dir/rule
+
+# Convenience name for target.
+run_tests: CMakeFiles/run_tests.dir/rule
+
+.PHONY : run_tests
+
+# clean rule for target.
+CMakeFiles/run_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/clean
+.PHONY : CMakeFiles/run_tests.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/doxygen.dir
+
+# All Build rule for target.
+CMakeFiles/doxygen.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target doxygen"
+.PHONY : CMakeFiles/doxygen.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/doxygen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/doxygen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/doxygen.dir/rule
+
+# Convenience name for target.
+doxygen: CMakeFiles/doxygen.dir/rule
+
+.PHONY : doxygen
+
+# clean rule for target.
+CMakeFiles/doxygen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/clean
+.PHONY : CMakeFiles/doxygen.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/geometry_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# clean rule for target.
+CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/aruco_corner_write.dir
+
+# All Build rule for target.
+CMakeFiles/aruco_corner_write.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_corner_write.dir/build.make CMakeFiles/aruco_corner_write.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_corner_write.dir/build.make CMakeFiles/aruco_corner_write.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target aruco_corner_write"
+.PHONY : CMakeFiles/aruco_corner_write.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/aruco_corner_write.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/aruco_corner_write.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/aruco_corner_write.dir/rule
+
+# Convenience name for target.
+aruco_corner_write: CMakeFiles/aruco_corner_write.dir/rule
+
+.PHONY : aruco_corner_write
+
+# clean rule for target.
+CMakeFiles/aruco_corner_write.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_corner_write.dir/build.make CMakeFiles/aruco_corner_write.dir/clean
+.PHONY : CMakeFiles/aruco_corner_write.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/roscpp_generate_messages_eus.dir
+
+# All Build rule for target.
+CMakeFiles/roscpp_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_eus.dir/build.make CMakeFiles/roscpp_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_eus.dir/build.make CMakeFiles/roscpp_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
+.PHONY : CMakeFiles/roscpp_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_eus: CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+.PHONY : roscpp_generate_messages_eus
+
+# clean rule for target.
+CMakeFiles/roscpp_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_eus.dir/build.make CMakeFiles/roscpp_generate_messages_eus.dir/clean
+.PHONY : CMakeFiles/roscpp_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/roscpp_generate_messages_cpp.dir
+
+# All Build rule for target.
+CMakeFiles/roscpp_generate_messages_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
+.PHONY : CMakeFiles/roscpp_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# clean rule for target.
+CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/geometry_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_eus: CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_eus
+
+# clean rule for target.
+CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# clean rule for target.
+CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_eus: CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# clean rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/roscpp_generate_messages_py.dir
+
+# All Build rule for target.
+CMakeFiles/roscpp_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
+.PHONY : CMakeFiles/roscpp_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+.PHONY : roscpp_generate_messages_py
+
+# clean rule for target.
+CMakeFiles/roscpp_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/clean
+.PHONY : CMakeFiles/roscpp_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/download_extra_data.dir
+
+# All Build rule for target.
+CMakeFiles/download_extra_data.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target download_extra_data"
+.PHONY : CMakeFiles/download_extra_data.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/download_extra_data.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/download_extra_data.dir/rule
+
+# Convenience name for target.
+download_extra_data: CMakeFiles/download_extra_data.dir/rule
+
+.PHONY : download_extra_data
+
+# clean rule for target.
+CMakeFiles/download_extra_data.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/clean
+.PHONY : CMakeFiles/download_extra_data.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/sensor_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
+.PHONY : CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# clean rule for target.
+CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+.PHONY : CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/camera_projector_aruco.dir
+
+# All Build rule for target.
+CMakeFiles/camera_projector_aruco.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera_projector_aruco.dir/build.make CMakeFiles/camera_projector_aruco.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera_projector_aruco.dir/build.make CMakeFiles/camera_projector_aruco.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target camera_projector_aruco"
+.PHONY : CMakeFiles/camera_projector_aruco.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/camera_projector_aruco.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/camera_projector_aruco.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/camera_projector_aruco.dir/rule
+
+# Convenience name for target.
+camera_projector_aruco: CMakeFiles/camera_projector_aruco.dir/rule
+
+.PHONY : camera_projector_aruco
+
+# clean rule for target.
+CMakeFiles/camera_projector_aruco.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera_projector_aruco.dir/build.make CMakeFiles/camera_projector_aruco.dir/clean
+.PHONY : CMakeFiles/camera_projector_aruco.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
+.PHONY : CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# clean rule for target.
+CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+.PHONY : CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/color_thresholding.dir
+
+# All Build rule for target.
+CMakeFiles/color_thresholding.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target color_thresholding"
+.PHONY : CMakeFiles/color_thresholding.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/color_thresholding.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/color_thresholding.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/color_thresholding.dir/rule
+
+# Convenience name for target.
+color_thresholding: CMakeFiles/color_thresholding.dir/rule
+
+.PHONY : color_thresholding
+
+# clean rule for target.
+CMakeFiles/color_thresholding.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/clean
+.PHONY : CMakeFiles/color_thresholding.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/project_aruco.dir
+
+# All Build rule for target.
+CMakeFiles/project_aruco.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_aruco.dir/build.make CMakeFiles/project_aruco.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_aruco.dir/build.make CMakeFiles/project_aruco.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target project_aruco"
+.PHONY : CMakeFiles/project_aruco.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/project_aruco.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/project_aruco.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/project_aruco.dir/rule
+
+# Convenience name for target.
+project_aruco: CMakeFiles/project_aruco.dir/rule
+
+.PHONY : project_aruco
+
+# clean rule for target.
+CMakeFiles/project_aruco.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_aruco.dir/build.make CMakeFiles/project_aruco.dir/clean
+.PHONY : CMakeFiles/project_aruco.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/sensor_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
+.PHONY : CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_py: CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_py
+
+# clean rule for target.
+CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+.PHONY : CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/std_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
+.PHONY : CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_nodejs: CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# clean rule for target.
+CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+.PHONY : CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/geometry_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# clean rule for target.
+CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/project_checkerboard.dir
+
+# All Build rule for target.
+CMakeFiles/project_checkerboard.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_checkerboard.dir/build.make CMakeFiles/project_checkerboard.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_checkerboard.dir/build.make CMakeFiles/project_checkerboard.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=24,25 "Built target project_checkerboard"
+.PHONY : CMakeFiles/project_checkerboard.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/project_checkerboard.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/project_checkerboard.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/project_checkerboard.dir/rule
+
+# Convenience name for target.
+project_checkerboard: CMakeFiles/project_checkerboard.dir/rule
+
+.PHONY : project_checkerboard
+
+# clean rule for target.
+CMakeFiles/project_checkerboard.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project_checkerboard.dir/build.make CMakeFiles/project_checkerboard.dir/clean
+.PHONY : CMakeFiles/project_checkerboard.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/aruco_detection.dir
+
+# All Build rule for target.
+CMakeFiles/aruco_detection.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_detection.dir/build.make CMakeFiles/aruco_detection.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_detection.dir/build.make CMakeFiles/aruco_detection.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target aruco_detection"
+.PHONY : CMakeFiles/aruco_detection.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/aruco_detection.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/aruco_detection.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/aruco_detection.dir/rule
+
+# Convenience name for target.
+aruco_detection: CMakeFiles/aruco_detection.dir/rule
+
+.PHONY : aruco_detection
+
+# clean rule for target.
+CMakeFiles/aruco_detection.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_detection.dir/build.make CMakeFiles/aruco_detection.dir/clean
+.PHONY : CMakeFiles/aruco_detection.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/geometry_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# clean rule for target.
+CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+.PHONY : CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_nodejs: CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# clean rule for target.
+CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+.PHONY : CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tree_detection.dir
+
+# All Build rule for target.
+CMakeFiles/tree_detection.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=28,29 "Built target tree_detection"
+.PHONY : CMakeFiles/tree_detection.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tree_detection.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tree_detection.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/tree_detection.dir/rule
+
+# Convenience name for target.
+tree_detection: CMakeFiles/tree_detection.dir/rule
+
+.PHONY : tree_detection
+
+# clean rule for target.
+CMakeFiles/tree_detection.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_detection.dir/build.make CMakeFiles/tree_detection.dir/clean
+.PHONY : CMakeFiles/tree_detection.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/clean_test_results.dir
+
+# All Build rule for target.
+CMakeFiles/clean_test_results.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target clean_test_results"
+.PHONY : CMakeFiles/clean_test_results.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/clean_test_results.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/clean_test_results.dir/rule
+
+# Convenience name for target.
+clean_test_results: CMakeFiles/clean_test_results.dir/rule
+
+.PHONY : clean_test_results
+
+# clean rule for target.
+CMakeFiles/clean_test_results.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/clean
+.PHONY : CMakeFiles/clean_test_results.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/aruco_project_border.dir
+
+# All Build rule for target.
+CMakeFiles/aruco_project_border.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_project_border.dir/build.make CMakeFiles/aruco_project_border.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_project_border.dir/build.make CMakeFiles/aruco_project_border.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target aruco_project_border"
+.PHONY : CMakeFiles/aruco_project_border.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/aruco_project_border.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/aruco_project_border.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/aruco_project_border.dir/rule
+
+# Convenience name for target.
+aruco_project_border: CMakeFiles/aruco_project_border.dir/rule
+
+.PHONY : aruco_project_border
+
+# clean rule for target.
+CMakeFiles/aruco_project_border.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aruco_project_border.dir/build.make CMakeFiles/aruco_project_border.dir/clean
+.PHONY : CMakeFiles/aruco_project_border.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tree_segmentation.dir
+
+# All Build rule for target.
+CMakeFiles/tree_segmentation.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=30,31 "Built target tree_segmentation"
+.PHONY : CMakeFiles/tree_segmentation.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tree_segmentation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tree_segmentation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/tree_segmentation.dir/rule
+
+# Convenience name for target.
+tree_segmentation: CMakeFiles/tree_segmentation.dir/rule
+
+.PHONY : tree_segmentation
+
+# clean rule for target.
+CMakeFiles/tree_segmentation.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_segmentation.dir/build.make CMakeFiles/tree_segmentation.dir/clean
+.PHONY : CMakeFiles/tree_segmentation.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/std_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+.PHONY : CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# clean rule for target.
+CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+.PHONY : CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
 # Target rules for target gtest/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
 gtest/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=10,11,12,13 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=14,15,16,17 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1220,7 +1307,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=7,8,9 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=11,12,13 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1247,7 +1334,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=18,19 "Built target gtest"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1274,7 +1361,7 @@ gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean:
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target gtest_main"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
