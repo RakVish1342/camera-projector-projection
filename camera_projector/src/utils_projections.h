@@ -43,7 +43,7 @@ void showImgFS(std::string win_name, cv::Mat img){
     cv::namedWindow(win_name, CV_WINDOW_NORMAL);
     cv::setWindowProperty(win_name, CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
     cv::imshow(win_name, img);
-    cv::waitKey(0);
+    cv::waitKey(5);
 
 
 }

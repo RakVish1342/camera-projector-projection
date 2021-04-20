@@ -4,6 +4,7 @@
 CMakeFiles/camera_projector_aruco.dir/src/camera_projector_aruco.cpp.o
  /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/PixelCalculations.h
  /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/camera_projector_aruco.cpp
+ /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/utils_projections.h
  /opt/ros/melodic/include/cv_bridge/cv_bridge.h
  /opt/ros/melodic/include/geometry_msgs/Point.h
  /opt/ros/melodic/include/geometry_msgs/Pose.h

@@ -50,7 +50,7 @@ int main(int argc, char** argv){
         calculatePixelsInProjectorPlane(corner_tr, corner_tl, corner_br, corner_bl, px_tl, px_tr, px_br, px_bl);
 
         //draw the corners on the image and show the image
-        drawAndShowCorners(px_tl, px_tr, px_br, px_tl);
+        drawAndShowCorners(px_tl, px_tr, px_br, px_bl);
         ros::spinOnce();
         rate.sleep();
 

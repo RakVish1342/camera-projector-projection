@@ -3,6 +3,7 @@
 
 CMakeFiles/camera_projector_aruco.dir/src/camera_projector_aruco.cpp.o: ../src/PixelCalculations.h
 CMakeFiles/camera_projector_aruco.dir/src/camera_projector_aruco.cpp.o: ../src/camera_projector_aruco.cpp
+CMakeFiles/camera_projector_aruco.dir/src/camera_projector_aruco.cpp.o: ../src/utils_projections.h
 CMakeFiles/camera_projector_aruco.dir/src/camera_projector_aruco.cpp.o: /opt/ros/melodic/include/cv_bridge/cv_bridge.h
 CMakeFiles/camera_projector_aruco.dir/src/camera_projector_aruco.cpp.o: /opt/ros/melodic/include/geometry_msgs/Point.h
 CMakeFiles/camera_projector_aruco.dir/src/camera_projector_aruco.cpp.o: /opt/ros/melodic/include/geometry_msgs/Pose.h

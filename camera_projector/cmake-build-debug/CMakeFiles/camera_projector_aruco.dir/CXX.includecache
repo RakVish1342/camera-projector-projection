@@ -21,6 +21,8 @@ eigen3/Eigen/Dense
 -
 eigen3/Eigen/Geometry
 -
+utils_projections.h
+/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/utils_projections.h
 
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/camera_projector_aruco.cpp
 iostream
@@ -45,6 +47,10 @@ eigen3/Eigen/Geometry
 -
 PixelCalculations.h
 /home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/PixelCalculations.h
+
+/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/src/utils_projections.h
+fstream
+-
 
 /opt/ros/melodic/include/cv_bridge/cv_bridge.h
 sensor_msgs/Image.h
