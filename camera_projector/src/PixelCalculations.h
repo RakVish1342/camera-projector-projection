@@ -28,15 +28,14 @@ cv::Point2d calculatePixels(Eigen::Vector3d corner){
             0.0, 614.45849609375, 238.79359436035156,
             0.0, 0.0, 1.0;
 
-    /*cv_k_projector << 1329.73, 0.0, 420.59,
+    cv_k_projector << 1329.73, 0.0, 420.59,
                       0.0, 1322.18, 395.68,
-                      0.0, 0.0, 1.0;*/
-    cv_k_projector << 1329.73, 0.0, 960.59,
-                      0.0, 1322.18, 540.68,
                       0.0, 0.0, 1.0;
+
     cv_d_camera <<  0.17198306778548356, -0.15695033321750945, -0.0065613334239603060, 0.0035590493094028669, 0.0;
 
     cv_d_projector << 0.56581469574959975, -3.8373751872066872, -0.017805365171805934, -0.025716309863278747, 0.0;
+
 
     Eigen::Matrix3d R_proj_cam;
     R_proj_cam <<0.99957512114540603, -0.023479623897468518, 0.017270913374231957,
@@ -45,6 +44,7 @@ cv::Point2d calculatePixels(Eigen::Vector3d corner){
 
     Eigen::Vector3d T_proj_cam, T_cam_proj;
     T_proj_cam <<  0.10171584394938355, -0.18582068182488356, 0.12325087629628882;
+
     /***/
     //TODO: invert R_inv
     //TODO: add offset and scale and make it coincide

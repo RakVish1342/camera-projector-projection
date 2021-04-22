@@ -87,6 +87,18 @@ install/strip/fast: preinstall/fast
 	/snap/clion/149/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/snap/clion/149/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/snap/clion/149/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -141,18 +153,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/snap/clion/149/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/149/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/149/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -302,19 +302,6 @@ roscpp_generate_messages_nodejs: cmake_check_build_system
 roscpp_generate_messages_nodejs/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_eus
@@ -694,6 +681,32 @@ tree_segmentation/fast:
 .PHONY : tree_segmentation/fast
 
 #=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named homography_optimization_viz
+
+# Build rule for target.
+homography_optimization_viz: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 homography_optimization_viz
+.PHONY : homography_optimization_viz
+
+# fast build rule for target.
+homography_optimization_viz/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/homography_optimization_viz.dir/build.make CMakeFiles/homography_optimization_viz.dir/build
+.PHONY : homography_optimization_viz/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -893,6 +906,33 @@ src/color_thresholding.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_thresholding.dir/build.make CMakeFiles/color_thresholding.dir/src/color_thresholding.cpp.s
 .PHONY : src/color_thresholding.cpp.s
 
+src/homography_optimization_viz.o: src/homography_optimization_viz.cpp.o
+
+.PHONY : src/homography_optimization_viz.o
+
+# target to build an object file
+src/homography_optimization_viz.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/homography_optimization_viz.dir/build.make CMakeFiles/homography_optimization_viz.dir/src/homography_optimization_viz.cpp.o
+.PHONY : src/homography_optimization_viz.cpp.o
+
+src/homography_optimization_viz.i: src/homography_optimization_viz.cpp.i
+
+.PHONY : src/homography_optimization_viz.i
+
+# target to preprocess a source file
+src/homography_optimization_viz.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/homography_optimization_viz.dir/build.make CMakeFiles/homography_optimization_viz.dir/src/homography_optimization_viz.cpp.i
+.PHONY : src/homography_optimization_viz.cpp.i
+
+src/homography_optimization_viz.s: src/homography_optimization_viz.cpp.s
+
+.PHONY : src/homography_optimization_viz.s
+
+# target to generate assembly for a file
+src/homography_optimization_viz.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/homography_optimization_viz.dir/build.make CMakeFiles/homography_optimization_viz.dir/src/homography_optimization_viz.cpp.s
+.PHONY : src/homography_optimization_viz.cpp.s
+
 src/project_aruco.o: src/project_aruco.cpp.o
 
 .PHONY : src/project_aruco.o
@@ -1080,6 +1120,7 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... homography_optimization_viz"
 	@echo "... project_aruco"
 	@echo "... project_checkerboard"
 	@echo "... tree_animation"
@@ -1100,6 +1141,9 @@ help:
 	@echo "... src/color_thresholding.o"
 	@echo "... src/color_thresholding.i"
 	@echo "... src/color_thresholding.s"
+	@echo "... src/homography_optimization_viz.o"
+	@echo "... src/homography_optimization_viz.i"
+	@echo "... src/homography_optimization_viz.s"
 	@echo "... src/project_aruco.o"
 	@echo "... src/project_aruco.i"
 	@echo "... src/project_aruco.s"

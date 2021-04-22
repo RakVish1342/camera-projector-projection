@@ -213,6 +213,8 @@ add_executable(tree_animation src/tree_animation.cpp)
 add_executable(project_aruco src/project_aruco.cpp)
 add_executable(aruco_project_border src/aruco_project_border.cpp)
 add_executable(camera_projector_aruco src/camera_projector_aruco.cpp src/PixelCalculations.h)
+add_executable(homography_optimization_viz src/homography_optimization_viz.cpp)
+
 
 
 target_link_libraries(aruco_detection   ${catkin_LIBRARIES} ${OpenCV_LIBS})
@@ -225,3 +227,4 @@ target_link_libraries(tree_animation ${catkin_LIBRARIES} ${OpenCV_LIBS})
 target_link_libraries(project_aruco ${catkin_LIBRARIES} ${OpenCV_LIBS})
 target_link_libraries(aruco_project_border ${catkin_LIBRARIES} ${OpenCV_LIBS})
 target_link_libraries(camera_projector_aruco ${catkin_LIBRARIES} ${OpenCV_LIBS} )
+target_link_libraries(homography_optimization_viz ${catkin_LIBRARIES} ${OpenCV_LIBS} )

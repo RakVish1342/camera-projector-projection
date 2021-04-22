@@ -14,7 +14,7 @@
 
 std::string image_topic_name = "/camera/color/image_raw";
 bool new_image = false;
-cv::Mat current_image;
+cv::Mat realsense_image;
 void realsenseImageCallback(const sensor_msgs::ImageConstPtr& msg){
     cv_bridge::CvImagePtr cv_ptr;
     try
@@ -26,7 +26,7 @@ void realsenseImageCallback(const sensor_msgs::ImageConstPtr& msg){
         ROS_ERROR("cv_bridge exception: %s", e.what());
         return;
     }
-    current_image = cv_ptr->image;
+    realsense_image = cv_ptr->image;
 
     /*// Update GUI Window
     cv::imshow("RealSenseImage", cv_ptr->image);

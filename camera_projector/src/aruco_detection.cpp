@@ -28,7 +28,7 @@ cv::Matx41d aa2quaternion(const cv::Vec3d& aa)
 }
 
 bool new_image = false;
-cv::Mat current_image;
+cv::Mat realsense_image;
 void realsenseImageCallback(const sensor_msgs::ImageConstPtr& msg){
     cv_bridge::CvImagePtr cv_ptr;
     try
@@ -40,7 +40,7 @@ void realsenseImageCallback(const sensor_msgs::ImageConstPtr& msg){
         ROS_ERROR("cv_bridge exception: %s", e.what());
         return;
     }
-    current_image = cv_ptr->image;
+    realsense_image = cv_ptr->image;
 
     /*// Update GUI Window
     cv::imshow("RealSenseImage", cv_ptr->image);
@@ -86,8 +86,8 @@ int main(int argc, char** argv){
         std::vector<std::vector<cv::Point2f> > marker_corners, rejected_candidates;
         cv::Ptr<cv::aruco::DetectorParameters> parameters = cv::aruco::DetectorParameters::create();
         cv::Ptr<cv::aruco::Dictionary> dictionary = cv::aruco::getPredefinedDictionary(cv::aruco::DICT_6X6_250);
-        cv::aruco::detectMarkers(current_image, dictionary, marker_corners, markerIds, parameters, rejected_candidates);
-        cv::Mat output_image = current_image.clone();
+        cv::aruco::detectMarkers(realsense_image, dictionary, marker_corners, markerIds, parameters, rejected_candidates);
+        cv::Mat output_image = realsense_image.clone();
         cv::aruco::drawDetectedMarkers(output_image, marker_corners, markerIds);
         cv::imshow("detected markers", output_image);
         cv::waitKey(3);
