@@ -10,25 +10,32 @@
 #include <opencv2/opencv.hpp>
 #include "utils_projections.h"
 
-std::string aruco_image_path = "/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/data/images/marker.png";
-std::string corner_file_name="/home/alg/projection_mapping/projection_ws/src/camera-projector-projection/camera_projector/data/images/aruco_corners.txt";
+std::string aruco_image_path = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images/marker1.png";
+std::string corner_file_name="/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images/aruco_corners.txt";
 const double scale = 1;
 
 void makeArucoImage (cv::Mat& img){
     //load the checkerboard image
     cv::Mat aruco_img = cv::imread(aruco_image_path);
-    std::cout << "img size: " << aruco_img.rows << " " << aruco_img.cols << std::endl;
+    std::cout << "img size: " << aruco_img.rows << " " << aruco_img.cols << " " << aruco_img.channels() 
+        << " " << type2str(aruco_img.type()) << std::endl;
+
+    cv::Mat aruco_img_gray;
+    cv::cvtColor(aruco_img, aruco_img_gray, CV_BGR2GRAY);
+    std::cout << "img gray size: " << aruco_img_gray.rows << " " << aruco_img_gray.cols << " " << aruco_img_gray.channels() 
+        << " " << type2str(aruco_img_gray.type()) << std::endl;
 
     //white background image
     cv::Mat background_white_img = cv::Mat(1080, 1920, CV_8UC1);
     makeImgWhite(background_white_img);
-    std::cout<<"bg size: "<<background_white_img.rows<<" "<<background_white_img.cols<<"\n";
+    std::cout<<"bg size: "<<background_white_img.rows<<" "<< background_white_img.cols<< " " << background_white_img.channels() 
+    << " " << type2str(background_white_img.type()) << "\n";
 
     //add the   checkerboard to the white image
-    addImages(background_white_img, aruco_img);
+    addImages(background_white_img, aruco_img_gray);
     img = background_white_img.clone();
-
 }
+
 void detectArucoCorners(cv::Mat current_image, std::vector<std::vector<cv::Point2f> >& marker_corners){
 
     std::vector<int> markerIds;

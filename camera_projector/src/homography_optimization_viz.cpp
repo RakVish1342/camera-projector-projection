@@ -9,7 +9,7 @@
 #include <geometry_msgs/PoseStamped.h>
 #include <eigen3/Eigen/Dense>
 #include <eigen3/Eigen/Geometry>
-#include<ros/ros.h>
+#include <ros/ros.h>
 #include "homography_optimization_utils.h"
 
 
@@ -18,8 +18,8 @@ bool new_image = false;
 cv::Mat realsense_image;
 
 //corner file names
-std::string projector_corners_filename = "/home/alg/projector_corners.txt";
-std::string camera_corners_filename = "/home/alg/camera_corners.txt";
+std::string projector_corners_filename = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images";
+std::string camera_corners_filename = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images";
 
 void realsenseImageCallback(const sensor_msgs::ImageConstPtr& msg){
     cv_bridge::CvImagePtr cv_ptr;
@@ -40,6 +40,7 @@ void realsenseImageCallback(const sensor_msgs::ImageConstPtr& msg){
 int main(int argc, char** argv){
 
     ros::init(argc, argv, "homography_optimization_viz");
+    std::cout << "Running Node: homography_optimization_viz..." << std::endl;
     ros::NodeHandle nh;
 
     //get ros image realsenses
@@ -58,22 +59,25 @@ int main(int argc, char** argv){
         cv::Mat projector_aruco_img;
         makeArucoImage(projector_aruco_img);
 
+        cv::imshow("Display window", projector_aruco_img);
+        int k = cv::waitKey(3);
+
         //detect aruco markers in this image
         std::vector<std::vector<cv::Point2f> > projector_marker_corners;
         detectArucoCorners(projector_aruco_img, projector_marker_corners);
 
+
         //show aruco marker in full screen
         showImgFS("Projector Screen", projector_aruco_img);
 
-        //time delay of 1s
+        //time delay for camera to adjust to new projector image before capturing
         ros::Duration(1).sleep();
-
+        ros::spinOnce(); // capture image
 
         /** RealSense Processing **/
         //detect corners in that image
         std::vector<std::vector<cv::Point2f> > camera_marker_corners;
         detectArucoCorners(realsense_image, camera_marker_corners );
-
 
         //TODO: Check if these corners are same as the last ones
         //if corners are detected add both sets of corners  to different files
@@ -96,7 +100,6 @@ int main(int argc, char** argv){
         }
 
 
-        ros::spinOnce();
         rate.sleep();
     }
 
