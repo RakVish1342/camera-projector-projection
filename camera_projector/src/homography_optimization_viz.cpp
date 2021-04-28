@@ -46,27 +46,32 @@ int main(int argc, char** argv){
     //get ros image realsenses
     ros::Subscriber sub_image = nh.subscribe(image_topic_name, 1000, realsenseImageCallback);
 
-    ros::Rate rate(20);
+    ros::Rate rate(0.2);
 
     std::ofstream fout_projector(projector_corners_filename, std::ios::out);
     std::ofstream fout_camera(camera_corners_filename, std::ios::out);
 
+    // Start the opencv windowing system 
+    //TODO: Without a test image being displayed, the full screen windowing system does not work. Fix this.
+    cv::Mat tmpImg = cv::Mat(100, 100, CV_8UC1, cv::Scalar(0));
+    cv::imshow("tmpImg", tmpImg);
+    cv::waitKey(0);
 
+
+    int ctr = 0;
     while(ros::ok()){
 
 
         //make an image with white background and aruco marker
         cv::Mat projector_aruco_img;
-        makeArucoImage(projector_aruco_img);
-
-        cv::imshow("Display window", projector_aruco_img);
-        int k = cv::waitKey(3);
+        
+        if(ctr%2) makeArucoImage(projector_aruco_img, 500, 500);
+        if(!(ctr%2)) makeArucoImage(projector_aruco_img, 100, 100);
 
         //detect aruco markers in this image
         std::vector<std::vector<cv::Point2f> > projector_marker_corners;
         detectArucoCorners(projector_aruco_img, projector_marker_corners);
-
-
+         
         //show aruco marker in full screen
         showImgFS("Projector Screen", projector_aruco_img);
 

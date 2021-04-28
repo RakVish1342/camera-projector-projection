@@ -14,7 +14,7 @@ std::string aruco_image_path = "/home/rxth/catkin_ws/src/CameraProjectorProjecti
 std::string corner_file_name="/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images/aruco_corners.txt";
 const double scale = 1;
 
-void makeArucoImage (cv::Mat& img){
+void makeArucoImage (cv::Mat& img, int start_row=0, int start_col=0){
     //load the checkerboard image
     cv::Mat aruco_img = cv::imread(aruco_image_path);
     std::cout << "img size: " << aruco_img.rows << " " << aruco_img.cols << " " << aruco_img.channels() 
@@ -32,7 +32,7 @@ void makeArucoImage (cv::Mat& img){
     << " " << type2str(background_white_img.type()) << "\n";
 
     //add the   checkerboard to the white image
-    addImages(background_white_img, aruco_img_gray);
+    addImages(background_white_img, aruco_img_gray, start_row, start_col);
     img = background_white_img.clone();
 }
 
@@ -43,7 +43,6 @@ void detectArucoCorners(cv::Mat current_image, std::vector<std::vector<cv::Point
     cv::Ptr<cv::aruco::DetectorParameters> parameters = cv::aruco::DetectorParameters::create();
     cv::Ptr<cv::aruco::Dictionary> dictionary = cv::aruco::getPredefinedDictionary(cv::aruco::DICT_6X6_250);
     cv::aruco::detectMarkers(current_image, dictionary, marker_corners, markerIds, parameters, rejected_candidates);
-
 }
 
 

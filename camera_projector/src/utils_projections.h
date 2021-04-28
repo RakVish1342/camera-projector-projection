@@ -59,12 +59,11 @@ void makeImgBlack(cv::Mat& img){
             img.at<uchar>(i,j) = 0;
 }
 
-void addImages(cv::Mat& bg, cv::Mat img){
-    int start_loc_x = 250, start_loc_y = 250;
-    for(int i =0; i< img.rows; i++){
+void addImages(cv::Mat& bg, cv::Mat img, int start_loc_row=250, int start_loc_col=250){
+    for(int i=0; i<img.rows; i++){
         for(int j=0; j<img.cols; j++){
     
-            bg.at<uchar>(i + start_loc_x,j + start_loc_y) = img.at<uchar>(i,j);
+            bg.at<uchar>(start_loc_row + i, start_loc_col + j) = img.at<uchar>(i, j);
         }
     }
 
@@ -74,7 +73,7 @@ void showImgFS(std::string win_name, cv::Mat img){
     cv::namedWindow(win_name, CV_WINDOW_NORMAL);
     cv::setWindowProperty(win_name, CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
     cv::imshow(win_name, img);
-    cv::waitKey(5);
+    cv::waitKey(0);
 
 
 }
