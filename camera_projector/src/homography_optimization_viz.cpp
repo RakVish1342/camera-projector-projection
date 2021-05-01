@@ -14,14 +14,25 @@
 
 
 std::string image_topic_name = "/camera/color/image_raw";
-bool new_image = false;
+bool projector_state = true;
+bool camera_state = false;
 cv::Mat realsense_image;
+std::vector<std::vector<cv::Point2f>> projector_marker_corners;
+std::vector<std::vector<cv::Point2f>> camera_marker_corners;
+
 
 //corner file names
 std::string projector_corners_filename = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images";
 std::string camera_corners_filename = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images";
 
 void realsenseImageCallback(const sensor_msgs::ImageConstPtr& msg){
+
+    std::cout << "IMAGE CB" << std::endl;
+
+    std::ofstream fout_camera(camera_corners_filename, std::ios::out);    
+    std::ofstream fout_projector(projector_corners_filename, std::ios::out);
+
+    // Save msg to variable
     cv_bridge::CvImagePtr cv_ptr;
     try
     {
@@ -33,9 +44,53 @@ void realsenseImageCallback(const sensor_msgs::ImageConstPtr& msg){
         return;
     }
     realsense_image = cv_ptr->image;
-    new_image = true;
 
+
+    // RealSense Processing //
+    //detect corners in that image
+    detectArucoCorners(realsense_image, camera_marker_corners); 
+    std::cout << "CAM" << camera_marker_corners.size() << std::endl;
+
+    //TODO: Check if these corners are same as the last ones
+    //if corners detected in both, and is a new image (projector_state != image_state), save the corners
+    if( (projector_marker_corners.size()>0) && (camera_marker_corners.size()>0) && (projector_state != camera_state) ){
+
+        for(int i =0; i< projector_marker_corners.size(); i++){
+
+            fout_projector<<projector_marker_corners[i][0].x<<","<<projector_marker_corners[i][0].y<<"\n";
+            fout_projector<<projector_marker_corners[i][1].x<<","<<projector_marker_corners[i][1].y<<"\n";
+            fout_projector<<projector_marker_corners[i][2].x<<","<<projector_marker_corners[i][2].y<<"\n";
+            fout_projector<<projector_marker_corners[i][3].x<<","<<projector_marker_corners[i][3].y<<"\n";
+        }
+
+        for(int i =0; i< camera_marker_corners.size(); i++){
+            fout_camera<<camera_marker_corners[i][0].x<<","<<camera_marker_corners[i][0].y<<"\n";
+            fout_camera<<camera_marker_corners[i][1].x<<","<<camera_marker_corners[i][1].y<<"\n";
+            fout_camera<<camera_marker_corners[i][2].x<<","<<camera_marker_corners[i][2].y<<"\n";
+            fout_camera<<camera_marker_corners[i][3].x<<","<<camera_marker_corners[i][3].y<<"\n";
+         
+        }
+
+            std::cout <<"==========="<<std::endl;
+            std::cout<<projector_marker_corners[0][0].x<<","<<projector_marker_corners[0][0].y<<"\n";
+            std::cout<<projector_marker_corners[0][1].x<<","<<projector_marker_corners[0][1].y<<"\n";
+            std::cout<<projector_marker_corners[0][2].x<<","<<projector_marker_corners[0][2].y<<"\n";
+            std::cout<<projector_marker_corners[0][3].x<<","<<projector_marker_corners[0][3].y<<"\n";
+            std::cout <<"---"<<std::endl;
+            std::cout<<camera_marker_corners[0][0].x<<","<<camera_marker_corners[0][0].y<<"\n";
+            std::cout<<camera_marker_corners[0][1].x<<","<<camera_marker_corners[0][1].y<<"\n";
+            std::cout<<camera_marker_corners[0][2].x<<","<<camera_marker_corners[0][2].y<<"\n";
+            std::cout<<camera_marker_corners[0][3].x<<","<<camera_marker_corners[0][3].y<<"\n";   
+            std::cout <<"---"<<std::endl;
+
+        camera_state = projector_state;
+        projector_marker_corners.clear();
+        camera_marker_corners.clear();
+    }
+    fout_camera.close();
+    fout_projector.close();
 }
+
 
 int main(int argc, char** argv){
 
@@ -46,69 +101,38 @@ int main(int argc, char** argv){
     //get ros image realsenses
     ros::Subscriber sub_image = nh.subscribe(image_topic_name, 1000, realsenseImageCallback);
 
-    ros::Rate rate(0.2);
-
-    std::ofstream fout_projector(projector_corners_filename, std::ios::out);
-    std::ofstream fout_camera(camera_corners_filename, std::ios::out);
+    ros::Rate rate(1);
 
     // Start the opencv windowing system 
     //TODO: Without a test image being displayed, the full screen windowing system does not work. Fix this.
     cv::Mat tmpImg = cv::Mat(100, 100, CV_8UC1, cv::Scalar(0));
-    cv::imshow("tmpImg", tmpImg);
-    cv::waitKey(0);
-
 
     int ctr = 0;
     while(ros::ok()){
 
+        std::cout << "CTR:" << ctr << std::endl;
 
         //make an image with white background and aruco marker
         cv::Mat projector_aruco_img;
         
-        if(ctr%2) makeArucoImage(projector_aruco_img, 500, 500);
-        if(!(ctr%2)) makeArucoImage(projector_aruco_img, 100, 100);
+        // makeArucoImage(projector_aruco_img, 100, 100);
+        makeArucoImage(projector_aruco_img, 100+ctr*10, 100);
+        // if(ctr%2==0) makeArucoImage(projector_aruco_img, 100, 100);
+        // else if(ctr%2==1) makeArucoImage(projector_aruco_img, 500, 500);
 
         //detect aruco markers in this image
-        std::vector<std::vector<cv::Point2f> > projector_marker_corners;
         detectArucoCorners(projector_aruco_img, projector_marker_corners);
-         
+        std::cout << "PROJ" << projector_marker_corners[0].size() << std::endl;
+
         //show aruco marker in full screen
-        showImgFS("Projector Screen", projector_aruco_img);
+        showImgFS("Projector Screen", projector_aruco_img, 2000);
+        // ros::spinOnce(); // capture image
 
-        //time delay for camera to adjust to new projector image before capturing
-        ros::Duration(1).sleep();
-        ros::spinOnce(); // capture image
-
-        /** RealSense Processing **/
-        //detect corners in that image
-        std::vector<std::vector<cv::Point2f> > camera_marker_corners;
-        detectArucoCorners(realsense_image, camera_marker_corners );
-
-        //TODO: Check if these corners are same as the last ones
-        //if corners are detected add both sets of corners  to different files
-        if(camera_marker_corners.size() > 0){
-
-            for(int i =0; i< projector_marker_corners.size(); i++){
-                fout_projector<<projector_marker_corners[i][0].x<<","<<projector_marker_corners[i][0].y<<"\n";
-                fout_projector<<projector_marker_corners[i][1].x<<","<<projector_marker_corners[i][1].y<<"\n";
-                fout_projector<<projector_marker_corners[i][2].x<<","<<projector_marker_corners[i][2].y<<"\n";
-                fout_projector<<projector_marker_corners[i][3].x<<","<<projector_marker_corners[i][3].y<<"\n";
-            }
-
-            for(int i =0; i< camera_marker_corners.size(); i++){
-                fout_camera<<camera_marker_corners[i][0].x<<","<<camera_marker_corners[i][0].y<<"\n";
-                fout_camera<<camera_marker_corners[i][1].x<<","<<camera_marker_corners[i][1].y<<"\n";
-                fout_camera<<camera_marker_corners[i][2].x<<","<<camera_marker_corners[i][2].y<<"\n";
-                fout_camera<<camera_marker_corners[i][3].x<<","<<camera_marker_corners[i][3].y<<"\n";
-            }
-
-        }
-
-
+        // reset flag to indicate new image in next iteration
+        projector_state = !projector_state;
+        ctr += 1;
         rate.sleep();
     }
 
-    fout_camera.close();
-    fout_projector.close();
     return 0;
 }

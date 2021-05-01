@@ -253,7 +253,7 @@ class ProjectCorners:
         # print("===")
         # print("IMG PTS")
         # print(imgpts)
-        # cv2.circle(img, tuple(imgpts[0].ravel()), 15, (255,0,0), 5)
+        cv2.circle(img, tuple(imgpts[0].ravel()), 15, (255,0,0), 5)
         # cv2.circle(img, tuple(imgpts[1].ravel()), 15, (0,255,0), 5)
         # cv2.circle(img, tuple(imgpts[2].ravel()), 15, (0,0,255), 5)
         # cv2.circle(img, tuple(imgpts[3].ravel()), 15, (255,0,255), 5)
