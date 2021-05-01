@@ -19,18 +19,16 @@ bool camera_state = false;
 cv::Mat realsense_image;
 std::vector<std::vector<cv::Point2f>> projector_marker_corners;
 std::vector<std::vector<cv::Point2f>> camera_marker_corners;
-
-
-//corner file names
-std::string projector_corners_filename = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images";
-std::string camera_corners_filename = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images";
+std::string projector_corners_filename = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/corners/corners_projector";
+std::string camera_corners_filename = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/corners/corners_camera";
+int fileIdx=1;
 
 void realsenseImageCallback(const sensor_msgs::ImageConstPtr& msg){
+    std::ofstream fout_camera(camera_corners_filename+std::to_string(fileIdx)+".txt", std::ios::out);    
+    std::ofstream fout_projector(projector_corners_filename+std::to_string(fileIdx)+".txt", std::ios::out);
+
 
     std::cout << "IMAGE CB" << std::endl;
-
-    std::ofstream fout_camera(camera_corners_filename, std::ios::out);    
-    std::ofstream fout_projector(projector_corners_filename, std::ios::out);
 
     // Save msg to variable
     cv_bridge::CvImagePtr cv_ptr;
@@ -57,6 +55,7 @@ void realsenseImageCallback(const sensor_msgs::ImageConstPtr& msg){
 
         for(int i =0; i< projector_marker_corners.size(); i++){
 
+            std::cout<<"Wrtubg ti fuke\n"; 
             fout_projector<<projector_marker_corners[i][0].x<<","<<projector_marker_corners[i][0].y<<"\n";
             fout_projector<<projector_marker_corners[i][1].x<<","<<projector_marker_corners[i][1].y<<"\n";
             fout_projector<<projector_marker_corners[i][2].x<<","<<projector_marker_corners[i][2].y<<"\n";
@@ -64,6 +63,7 @@ void realsenseImageCallback(const sensor_msgs::ImageConstPtr& msg){
         }
 
         for(int i =0; i< camera_marker_corners.size(); i++){
+             std::cout<<"Wrtubg ti fukee\n";
             fout_camera<<camera_marker_corners[i][0].x<<","<<camera_marker_corners[i][0].y<<"\n";
             fout_camera<<camera_marker_corners[i][1].x<<","<<camera_marker_corners[i][1].y<<"\n";
             fout_camera<<camera_marker_corners[i][2].x<<","<<camera_marker_corners[i][2].y<<"\n";
@@ -86,9 +86,9 @@ void realsenseImageCallback(const sensor_msgs::ImageConstPtr& msg){
         camera_state = projector_state;
         projector_marker_corners.clear();
         camera_marker_corners.clear();
+        fileIdx += 1;
     }
-    fout_camera.close();
-    fout_projector.close();
+
 }
 
 
@@ -108,17 +108,20 @@ int main(int argc, char** argv){
     cv::Mat tmpImg = cv::Mat(100, 100, CV_8UC1, cv::Scalar(0));
 
     int ctr = 0;
+    int ctr_j = 0; 
     while(ros::ok()){
+        if((ctr%7) == 0) { 
+            ctr_j++; 
+            ctr = 0;
+        }
+        if(ctr_j> 36) break; 
 
         std::cout << "CTR:" << ctr << std::endl;
 
         //make an image with white background and aruco marker
         cv::Mat projector_aruco_img;
         
-        // makeArucoImage(projector_aruco_img, 100, 100);
-        makeArucoImage(projector_aruco_img, 100+ctr*10, 100);
-        // if(ctr%2==0) makeArucoImage(projector_aruco_img, 100, 100);
-        // else if(ctr%2==1) makeArucoImage(projector_aruco_img, 500, 500);
+        makeArucoImage(projector_aruco_img, 100+ctr*50, 100 + ctr_j*50);
 
         //detect aruco markers in this image
         detectArucoCorners(projector_aruco_img, projector_marker_corners);
@@ -126,13 +129,16 @@ int main(int argc, char** argv){
 
         //show aruco marker in full screen
         showImgFS("Projector Screen", projector_aruco_img, 2000);
-        // ros::spinOnce(); // capture image
+        ros::spinOnce(); // capture image
 
         // reset flag to indicate new image in next iteration
         projector_state = !projector_state;
         ctr += 1;
         rate.sleep();
     }
+
+ //   fout_projector.close(); 
+   // fout_camera.close(); 
 
     return 0;
 }

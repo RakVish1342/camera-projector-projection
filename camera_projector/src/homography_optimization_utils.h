@@ -10,7 +10,7 @@
 #include <opencv2/opencv.hpp>
 #include "utils_projections.h"
 
-std::string aruco_image_path = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images/marker1.png";
+std::string aruco_image_path = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images/marker23.png";
 std::string corner_file_name="/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/images/aruco_corners.txt";
 const double scale = 1;
 
