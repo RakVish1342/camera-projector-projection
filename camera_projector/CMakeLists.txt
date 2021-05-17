@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 find_package(OpenCV REQUIRED)
 #find_package(Eigen REQUIRED)
+find_package(Ceres REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -117,6 +118,7 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${CERES_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -214,6 +216,7 @@ add_executable(project_aruco src/project_aruco.cpp)
 add_executable(aruco_project_border src/aruco_project_border.cpp)
 add_executable(camera_projector_aruco src/camera_projector_aruco.cpp src/PixelCalculations.h)
 add_executable(homography_optimization_viz src/homography_optimization_viz.cpp)
+add_executable(homography_optimization src/homography_optimization.cpp)
 
 
 
@@ -226,5 +229,6 @@ target_link_libraries(color_thresholding ${catkin_LIBRARIES} ${OpenCV_LIBS})
 target_link_libraries(tree_animation ${catkin_LIBRARIES} ${OpenCV_LIBS})
 target_link_libraries(project_aruco ${catkin_LIBRARIES} ${OpenCV_LIBS})
 target_link_libraries(aruco_project_border ${catkin_LIBRARIES} ${OpenCV_LIBS})
-target_link_libraries(camera_projector_aruco ${catkin_LIBRARIES} ${OpenCV_LIBS} )
-target_link_libraries(homography_optimization_viz ${catkin_LIBRARIES} ${OpenCV_LIBS} )
+target_link_libraries(camera_projector_aruco ${catkin_LIBRARIES} ${OpenCV_LIBS})
+target_link_libraries(homography_optimization_viz ${catkin_LIBRARIES} ${OpenCV_LIBS})
+target_link_libraries(homography_optimization ${catkin_LIBRARIES} ${OpenCV_LIBS} ${CERES_LIBRARIES})
