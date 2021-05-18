@@ -1,3 +1,13 @@
+#define NUM_FILES 233
+
+#include <fstream>
+#include <istream>
+#include <ios>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <utility>
+
 #include "ceres/ceres.h"
 #include "glog/logging.h"
 
@@ -90,45 +100,98 @@ const double data[] = {
 };
 // clang-format on
 
-struct ExponentialResidual {
-  ExponentialResidual(double x, double y) : x_(x), y_(y) {}
+struct ExponentialResidual
+{
+    ExponentialResidual(double x, double y) : x_(x), y_(y) {}
 
-  template <typename T>
-  bool operator()(const T* const m, const T* const c, T* residual) const {
-    residual[0] = y_ - exp(m[0] * x_ + c[0]);
-    return true;
-  }
+    template <typename T>
+    bool operator()(const T *const m, const T *const c, T *residual) const
+    {
+        residual[0] = y_ - exp(m[0] * x_ + c[0]);
+        return true;
+    }
 
- private:
-  const double x_;
-  const double y_;
+private:
+    const double x_;
+    const double y_;
 };
 
-int main(int argc, char** argv) {
-  google::InitGoogleLogging(argv[0]);
+void readCorners(std::vector< std::pair<int, int> >& cornersList, const std::string& filePrefix, std::string basePath)
+{
+    std::string fileSuffix = ".txt";
+    std::string fileName;
+    for(int i = 1; i <= NUM_FILES; ++i)
+    {   
+        fileName = filePrefix + std::to_string(i) + fileSuffix;
+        std::cout << fileName << std::endl;
 
-  double m = 0.0;
-  double c = 0.0;
+        // https://www.geeksforgeeks.org/csv-file-management-using-c/
+        // https://stackoverflow.com/questions/5605125/why-is-iostreameof-inside-a-loop-condition-i-e-while-stream-eof-cons
+        // OR Use rangeImageVisualization.cpp from TreeMapping if is a space separated/delimited filed
+        std::string line;
+        std::ifstream cornersFile(basePath + fileName);
+        if (cornersFile.is_open())
+        {   
+            while (std::getline(cornersFile, line))
+            {
+                // cout << line << '\n';
+                std::string x, y;
+                std::stringstream ss(line);
+                std::getline(ss, x, ',');
+                std::getline(ss, y, ',');
+                std::cout << x << ", " << y << std::endl;
+                cornersList.push_back( {std::stoi(x), std::stoi(y)} );
+            }
+        }
+        else
+        {
+            std::cout << "Error or Empty File." << std::endl;
+        }
 
-  Problem problem;
-  for (int i = 0; i < kNumObservations; ++i) {
-    problem.AddResidualBlock(
-        new AutoDiffCostFunction<ExponentialResidual, 1, 1, 1>(
-            new ExponentialResidual(data[2 * i], data[2 * i + 1])),
-        NULL,
-        &m,
-        &c);
-  }
+    }
 
-  Solver::Options options;
-  options.max_num_iterations = 25;
-  options.linear_solver_type = ceres::DENSE_QR;
-  options.minimizer_progress_to_stdout = true;
+}
 
-  Solver::Summary summary;
-  Solve(options, &problem, &summary);
-  std::cout << summary.BriefReport() << "\n";
-  std::cout << "Initial m: " << 0.0 << " c: " << 0.0 << "\n";
-  std::cout << "Final   m: " << m << " c: " << c << "\n";
-  return 0;
+int main(int argc, char **argv)
+{
+    std::string basePath = "/home/rxth/catkin_ws/src/CameraProjectorProjection/camera_projector/data/corners/";
+    std::vector< std::pair<int, int> > cameraCorners;
+    std::vector< std::pair<int, int> > projectorCorners;
+    readCorners(cameraCorners, "corners_camera", basePath);
+    readCorners(projectorCorners, "corners_projector", basePath);
+
+    std::cout << "---" << std::endl;
+    std::cout << cameraCorners.size() << ", " << projectorCorners.size() << std::endl;
+
+
+    /*  
+    google::InitGoogleLogging(argv[0]);
+
+    double m = 0.0;
+    double c = 0.0;
+
+    Problem problem;
+    for (int i = 0; i < kNumObservations; ++i)
+    {
+        problem.AddResidualBlock(
+            new AutoDiffCostFunction<ExponentialResidual, 1, 1, 1>(
+                new ExponentialResidual(data[2 * i], data[2 * i + 1])),
+            NULL,
+            &m,
+            &c);
+    }
+
+    Solver::Options options;
+    options.max_num_iterations = 25;
+    options.linear_solver_type = ceres::DENSE_QR;
+    options.minimizer_progress_to_stdout = true;
+
+    Solver::Summary summary;
+    Solve(options, &problem, &summary);
+    std::cout << summary.BriefReport() << "\n";
+    std::cout << "Initial m: " << 0.0 << " c: " << 0.0 << "\n";
+    std::cout << "Final   m: " << m << " c: " << c << "\n";
+    return 0;
+
+    */    
 }
