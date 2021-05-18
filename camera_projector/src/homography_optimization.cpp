@@ -103,8 +103,16 @@ void optimizeHomographyMatrix(const std::vector<std::pair<int, int>>& cameraCorn
     //TODO: Any good initialization value inferrable?
     //TODO: Send homography matrix at once as a vector/EigenVector/EigenMatrix instead of individual components
     // double h1, h2, h3, h4, h5, h6, h7, h8, h9; // If int h1, h2...h9 is used, compilation error obtained: "no matching function for call to ‘ceres::Problem::AddResidualBlock(ceres::AutoDiffCostFunction<CostFunctor, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1>*, NULL, int*, int*, int*, int*, int*, int*, int*, int*, int*)’ "
+
+    // Zero Matrix
+    // double h1, h2, h3, h4, h5, h6, h7, h8, h9;
+    // Identity Matrix
+    // double h2 = 0.0, h3 = 0.0, h4 = 0.0, h6 = 0.0, h7 = 0.0, h8 = 0.0;
+    // double h1 = 1.0, h5 = 1.0, h9 = 1.0;
+    // Scaling X and Y components
     double h2 = 0.0, h3 = 0.0, h4 = 0.0, h6 = 0.0, h7 = 0.0, h8 = 0.0;
-    double h1 = 1.0, h5 = 1.0, h9 = 1.0;
+    double h1 = 4.0, h5 = 4.0, h9 = 0.0;
+    
 
     std::cout << "BEFORE" << std::endl;
     std::cout << h1 << ", " << h2 << ", " << h3 << std::endl;
